@@ -1,0 +1,43 @@
+$color_first: #333333;
+$color_second: #727272;
+$color_three: #f8f8f8;
+
+$color_four: #00c8c8;
+
+//! color background
+.color--variant_dark {
+  background-color: $color_first;
+}
+
+.color--variant_secondary {
+  background-color: $color_second;
+}
+
+.color--variant_light {
+  background-color: $color_three;
+}
+
+.color--variant_primary {
+  background-color: $color_first;
+}
+
+//! color fonts
+.caption--variant_dark {
+  background-color: $color_first;
+}
+
+.caption--variant_secondary {
+  background-color: $color_second;
+}
+
+.caption--variant_light {
+  background-color: $color_three;
+}
+
+.caption--variant_primary {
+  background-color: $color_first;
+}
+
+body {
+  font-size: 10px;
+}

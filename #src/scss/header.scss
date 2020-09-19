@@ -1,0 +1,54 @@
+//! nav
+.header {
+  z-index: 999;
+  position: fixed;
+
+  @media (min-width: 992px) {
+    & {
+      position: static;
+    }
+  }
+
+  &__burger-button {
+    height: 30px;
+    width: 40px;
+    z-index: 100;
+    &-true {
+      min-width: 1px;
+      &--display-none {
+        display: none;
+      }
+    }
+    @media (min-width: 992px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  &__menu {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: red;
+    transform: translateX(100%);
+    transition: 0.25s linear all;
+    @media (min-width: 992px) {
+      & {
+        position: static;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        transition: 0s all;
+        transform: translateX(0%);
+      }
+    }
+  }
+
+  &__menu.is-active {
+    transform: translateX(0%);
+  }
+}

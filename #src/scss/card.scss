@@ -1,0 +1,22 @@
+.card {
+  min-width: 1px;
+  &__element {
+    &_details {
+      & summary::-webkit-details-marker {
+        display: none;
+      }
+      & > summary {
+        list-style: none;
+      }
+
+      & summary::after {
+        content: "close";
+        margin-left: 7px;
+      }
+
+      &[open] summary::after {
+        content: "open";
+      }
+    }
+  }
+}

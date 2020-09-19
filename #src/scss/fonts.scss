@@ -1,0 +1,127 @@
+@include font("Montserrat-Light", "Montserrat-Light", "400", "normal");
+@include font("Montserrat-Regular", "Montserrat-Regular", "400", "normal");
+@include font("Roboto-Regular", "Roboto-Regular", "400", "normal");
+
+.caption {
+  &__element {
+    min-width: 1px;
+  }
+  //! size
+  // &--size_1x {
+  //   @include adaptiv-font(16, 14);
+  // }
+  // &--size_1 {
+  //   @include adaptiv-font(57, 30);
+  // }
+  // &--size_2 {
+  //   @include adaptiv-font(23, 20);
+  // }
+  // &--size_3 {
+  //   @include adaptiv-font(19, 16);
+  // }
+  // &--size_4 {
+  //   @include adaptiv-font(14, 12);
+  // }
+  // &--size_5 {
+  //   @include adaptiv-font(13, 11);
+  // }
+  //! family
+  // &--family_first {
+  //   font-family: $font--first;
+  // }
+  // &--family_second {
+  //   font-family: $font--second;
+  // }
+  // &--family_three {
+  //   font-family: $font--three;
+  // }
+  // &--family_four {
+  //   font-family: $font--four;
+  // }
+  // &--family_last {
+  //   font-family: $font--last;
+  //   font-weight: 100;
+  // }
+  //! font-weight
+  &--weight_100 {
+    font-weight: 100;
+  }
+  &--weight_400 {
+    font-weight: 400;
+  }
+  &--weight_900 {
+    font-weight: 900;
+  }
+  //! color
+  // &--variant_white {
+  //   color: $color--white;
+  // }
+  // &--variant_second {
+  //   color: $color--second;
+  // }
+  //! other
+  &--text_uppercase {
+    text-transform: uppercase;
+  }
+
+  // &--line_height_sm {
+  //   line-height: 22px;
+  // }
+
+  &--align_center {
+    text-align: center;
+    @media (min-width: 576px) {
+      &_media_sm {
+        text-align: center;
+      }
+    }
+    @media (min-width: 768px) {
+      &_media_md {
+        text-align: center;
+      }
+    }
+    @media (min-width: 992px) {
+      &_media_lg {
+        text-align: center;
+      }
+    }
+    @media (min-width: 1200px) {
+      &_media_xl {
+        text-align: center;
+      }
+    }
+    @media (min-width: 1400px) {
+      &_media_xxl {
+        text-align: center;
+      }
+    }
+  }
+  &--align_left {
+    text-align: left;
+    @media (min-width: 576px) {
+      &_media_sm {
+        text-align: left;
+      }
+    }
+    @media (min-width: 768px) {
+      &_media_md {
+        text-align: left;
+      }
+    }
+    @media (min-width: 992px) {
+      &_media_lg {
+        text-align: left;
+      }
+    }
+    @media (min-width: 1200px) {
+      &_media_xl {
+        text-align: left;
+      }
+    }
+    @media (min-width: 1400px) {
+      &_media_xxl {
+        text-align: left;
+      }
+    }
+  }
+}

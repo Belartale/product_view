@@ -1,0 +1,30 @@
+@import "row_indents";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+
+  // todo MOD
+  &--indents_none {
+    margin: 0px;
+  }
+
+  &--items_center {
+    align-items: center;
+  }
+  &--items_flex_end {
+    align-items: flex-end;
+  }
+  &--justify_center {
+    justify-content: center;
+  }
+
+  &--justify_between {
+    justify-content: space-between;
+  }
+
+  &--justify_evenly {
+    justify-content: space-evenly;
+  }
+}
