@@ -1,3 +1,5 @@
+@import "variables";
+
 .cell {
   &--indents_none {
     padding: 0px;
@@ -9,6 +11,10 @@
   }
   &--align_center {
     align-items: center;
+  }
+
+  &--sides_md {
+    padding: 0 25px;
   }
 
   &--0 {

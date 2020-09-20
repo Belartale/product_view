@@ -1,47 +1,139 @@
-@include font("Montserrat-Light", "Montserrat-Light", "400", "normal");
 @include font("Montserrat-Regular", "Montserrat-Regular", "400", "normal");
+@include font("Montserrat-Light", "Montserrat-Light", "400", "normal");
 @include font("Roboto-Regular", "Roboto-Regular", "400", "normal");
+
+@import "variables";
+
+@mixin caption--size($value) {
+  //! transition fonts on full
+  @media (min-width: 992px) {
+    font-size: $value;
+  }
+
+  @media (min-width: 576px) {
+    &_media_sm {
+      font-size: $value;
+    }
+  }
+  @media (min-width: 768px) {
+    &_media_md {
+      font-size: $value;
+    }
+  }
+  @media (min-width: 992px) {
+    &_media_lg {
+      font-size: $value;
+    }
+  }
+  @media (min-width: 1200px) {
+    &_media_xl {
+      font-size: $value;
+    }
+  }
+  @media (min-width: 1400px) {
+    &_media_xxl {
+      font-size: $value;
+    }
+  }
+}
+@mixin caption--color($value) {
+  //! color media
+  @media (min-width: 576px) {
+    &_media_sm {
+      color: $value;
+    }
+  }
+  @media (min-width: 768px) {
+    &_media_md {
+      color: $value;
+    }
+  }
+  @media (min-width: 992px) {
+    &_media_lg {
+      color: $value;
+    }
+  }
+  @media (min-width: 1200px) {
+    &_media_xl {
+      color: $value;
+    }
+  }
+  @media (min-width: 1400px) {
+    &_media_xxl {
+      color: $value;
+    }
+  }
+}
 
 .caption {
   &__element {
     min-width: 1px;
   }
   //! size
-  // &--size_1x {
-  //   @include adaptiv-font(16, 14);
-  // }
-  // &--size_1 {
-  //   @include adaptiv-font(57, 30);
-  // }
-  // &--size_2 {
-  //   @include adaptiv-font(23, 20);
-  // }
-  // &--size_3 {
-  //   @include adaptiv-font(19, 16);
-  // }
-  // &--size_4 {
-  //   @include adaptiv-font(14, 12);
-  // }
-  // &--size_5 {
-  //   @include adaptiv-font(13, 11);
-  // }
+  &--size_1 {
+    font-size: 2em;
+    @include caption--size(4.8em);
+  }
+  &--size_2 {
+    font-size: 2.5em;
+    @include caption--size(3.6em);
+  }
+  &--size_3 {
+    font-size: 2em;
+    @include caption--size(3mm);
+  }
+  &--size_4 {
+    font-size: 1.8em;
+    @include caption--size(2.4em);
+  }
+  &--size_5 {
+    font-size: 1.6em;
+    @include caption--size(1.8em);
+  }
+  &--size_6 {
+    font-size: 1.5em;
+    @include caption--size(1.6em);
+  }
+  &--size_7 {
+    font-size: 1.4em;
+    @include caption--size(1.5em);
+  }
+  &--size_8 {
+    font-size: 1.3em;
+    @include caption--size(1.4em);
+  }
+  &--size_9 {
+    font-size: 1.2em;
+    @include caption--size(1.3em);
+  }
   //! family
-  // &--family_first {
-  //   font-family: $font--first;
-  // }
-  // &--family_second {
-  //   font-family: $font--second;
-  // }
-  // &--family_three {
-  //   font-family: $font--three;
-  // }
-  // &--family_four {
-  //   font-family: $font--four;
-  // }
-  // &--family_last {
-  //   font-family: $font--last;
-  //   font-weight: 100;
-  // }
+  &--family_1 {
+    font-family: "Montserrat-Regular";
+  }
+  &--family_2 {
+    font-family: "Montserrat-Light";
+  }
+  &--family_3 {
+    font-family: "Roboto-Regular";
+  }
+
+  //! width wold
+  &--spacing_1 {
+    letter-spacing: 0.2em;
+  }
+  &--spacing_2 {
+    letter-spacing: 0.054em;
+  }
+  &--spacing_3 {
+    letter-spacing: 0.05em;
+  }
+  &--spacing_4 {
+    letter-spacing: 0.027em;
+  }
+  &--spacing_5 {
+    letter-spacing: 0.02em;
+  }
+
   //! font-weight
   &--weight_100 {
     font-weight: 100;
@@ -52,21 +144,36 @@
   &--weight_900 {
     font-weight: 900;
   }
-  //! color
-  // &--variant_white {
-  //   color: $color--white;
-  // }
-  // &--variant_second {
-  //   color: $color--second;
-  // }
+
   //! other
-  &--text_uppercase {
+  &--uppercase {
     text-transform: uppercase;
   }
 
-  // &--line_height_sm {
-  //   line-height: 22px;
-  // }
+  //! color fonts
+  &--variant_dark {
+    color: $color_bark;
+    @include caption--color($color_bark);
+  }
+
+  &--variant_secondary {
+    color: $color_secondary;
+    @include caption--color($color_secondary);
+  }
+  &--variant_secondary_sm {
+    color: $color_secondary_sm;
+    @include caption--color($color_secondary_sm);
+  }
+
+  &--variant_light {
+    color: $color_light;
+    @include caption--color($color_light);
+  }
+
+  &--variant_primary {
+    color: $color_primary;
+    @include caption--color($color_primary);
+  }
 
   &--align_center {
     text-align: center;

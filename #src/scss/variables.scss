@@ -1,43 +1,114 @@
-$color_first: #333333;
-$color_second: #727272;
-$color_three: #f8f8f8;
+$color_bark: #333333;
+$color_secondary: #777777;
+$color_secondary_sm: #999999;
+$color_light: #f8f8f8;
+$color_primary: #00c8c8;
 
-$color_four: #00c8c8;
+@mixin media_background-color($var) {
+  & {
+    background-color: $var;
+  }
+  @media (min-width: 576px) {
+    &_media_xm {
+      background-color: $var;
+    }
+  }
+  @media (min-width: 768px) {
+    &_media_md {
+      background-color: $var;
+    }
+  }
+  @media (min-width: 992px) {
+    &_media_lg {
+      background-color: $var;
+    }
+  }
+  @media (min-width: 1200px) {
+    &_media_xl {
+      background-color: $var;
+    }
+  }
+  @media (min-width: 1400px) {
+    &_media_xxl {
+      background-color: $var;
+    }
+  }
+  //! max
+  @media (max-width: 576px) {
+    &_media_max_xm {
+      background-color: $var;
+    }
+  }
+  @media (max-width: 768px) {
+    &_media_max_md {
+      background-color: $var;
+    }
+  }
+  @media (max-width: 992px) {
+    &_media_max_lg {
+      background-color: $var;
+    }
+  }
+  @media (max-width: 1200px) {
+    &_media_max_xl {
+      background-color: $var;
+    }
+  }
+  @media (max-width: 1400px) {
+    &_media_max_xxl {
+      background-color: $var;
+    }
+  }
+}
 
 //! color background
 .color--variant_dark {
-  background-color: $color_first;
+  // background-color: $color_bark;
+  @include media_background-color($color_bark);
 }
 
 .color--variant_secondary {
-  background-color: $color_second;
+  // background-color: $color_secondary;
+  @include media_background-color($color_secondary);
+}
+.color--variant_secondary_sm {
+  @include media_background-color($color_secondary_sm);
 }
 
 .color--variant_light {
-  background-color: $color_three;
+  // background-color: $color_light;
+  @include media_background-color($color_light);
 }
 
 .color--variant_primary {
-  background-color: $color_first;
+  // background-color: $color_bark;
+  @include media_background-color($color_primary);
 }
 
-//! color fonts
-.caption--variant_dark {
-  background-color: $color_first;
-}
-
-.caption--variant_secondary {
-  background-color: $color_second;
-}
-
-.caption--variant_light {
-  background-color: $color_three;
-}
-
-.caption--variant_primary {
-  background-color: $color_first;
-}
-
-body {
-  font-size: 10px;
+@mixin min_media($what, $howMuch) {
+  @media (min-width: 576px) {
+    &_media_sm {
+      #{$what}: #{$howMuch};
+    }
+  }
+  @media (min-width: 768px) {
+    &_media_md {
+      #{$what}: #{$howMuch};
+    }
+  }
+  @media (min-width: 992px) {
+    &_media_lg {
+      #{$what}: #{$howMuch};
+    }
+  }
+  @media (min-width: 1200px) {
+    &_media_xl {
+      #{$what}: #{$howMuch};
+    }
+  }
+  @media (min-width: 1400px) {
+    &_media_xxl {
+      #{$what}: #{$howMuch};
+    }
+  }
 }

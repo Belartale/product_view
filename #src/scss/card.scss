@@ -1,7 +1,11 @@
+@import "variables";
+
 .card {
   min-width: 1px;
+  // __element_scroll
+
   &__element {
-    &_details {
+    &_details--arrow_right {
       & summary::-webkit-details-marker {
         display: none;
       }
@@ -10,13 +14,59 @@
       }
 
       & summary::after {
-        content: "close";
+        content: "⌵";
         margin-left: 7px;
       }
 
       &[open] summary::after {
-        content: "open";
+        content: "<";
+        position: relative;
       }
     }
+    &_details--arrow_bottom {
+      &:hover {
+        color: $color_primary;
+      }
+      & summary::-webkit-details-marker {
+        display: none;
+      }
+      & > summary {
+        list-style: none;
+      }
+
+      & summary {
+        position: relative;
+      }
+      & summary p {
+        white-space: pre;
+      }
+
+      & summary::after {
+        content: "⌵";
+        position: absolute;
+        left: 0;
+        top: 20px;
+      }
+
+      &[open] summary::after {
+        content: "<";
+      }
+    }
+    &_scroll {
+      // white-space: pre;
+      overflow-x: scroll;
+      @media (min-width: 992px) {
+        & {
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  // todo MOD
+  &--flex {
+    display: flex;
+  }
+  &--inline {
+    display: inline;
   }
 }

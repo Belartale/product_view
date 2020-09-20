@@ -1,0 +1,13 @@
+@import "variables";
+
+.control {
+  // todo MOD
+  &--flex {
+    display: flex;
+  }
+  &--position_right {
+    position: fixed;
+    top: 2em;
+    right: 3em;
+  }
+}
