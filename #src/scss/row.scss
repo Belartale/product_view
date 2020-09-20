@@ -4,7 +4,31 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: -10px;
+  margin: 0 -10px;
+
+  &--relative {
+    position: relative;
+    @media (min-width: 992px) {
+      &_sm_top_media_lg {
+        position: relative;
+        bottom: 0.6em;
+      }
+    }
+  }
+  &--absolute_right_sm {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (min-width: 992px) {
+    &_media_lg {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+    }
+  }
   // todo MOD
   &--flex {
     display: flex;
@@ -83,6 +107,14 @@
       }
     }
   }
+  &--justify_end {
+    justify-content: flex-end;
+    @media (min-width: 992px) {
+      &_media_lg {
+        justify-content: flex-end;
+      }
+    }
+  }
   &--flex_nowrap {
     flex-wrap: nowrap;
     @media (min-width: 992px) {
@@ -92,7 +124,7 @@
     }
   }
 
-  @for $i from 1 through 5 {
+  @for $i from 1 through 8 {
     &--order_#{$i} {
       order: $i;
       @include min_media(order, #{$i});

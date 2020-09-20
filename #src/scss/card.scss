@@ -55,9 +55,13 @@
     &_scroll {
       // white-space: pre;
       overflow-x: scroll;
+      &::-webkit-scrollbar-thumb {
+        color: $color_primary;
+        background-color: $color_primary;
+      }
       @media (min-width: 992px) {
         & {
-          overflow: hidden;
+          overflow: visible;
         }
       }
     }

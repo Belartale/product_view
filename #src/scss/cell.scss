@@ -4,6 +4,16 @@
   &--indents_none {
     padding: 0px;
     margin: 0px;
+    @include min_media(margin, 0);
+  }
+
+  &--margin_none {
+    margin: 0;
+    @include min_media(margin, 0 !important);
+  }
+  &--padding_none {
+    padding: 0;
+    @include min_media(padding, 0 !important);
   }
 
   &--display_flex {
@@ -14,7 +24,24 @@
   }
 
   &--sides_md {
-    padding: 0 25px;
+    padding: 0 2.5em;
+    @include min_media(padding, 0 2.5em);
+  }
+  &--sides_sm {
+    padding: 0 1em;
+    @include min_media(padding, 0 1em);
+  }
+
+  @media (min-width: 992px) {
+    &--vert_sm_media_lg {
+      margin: 15px 0;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &--left_padding_none_media_max_lg {
+      padding-left: 0px;
+    }
   }
 
   &--0 {

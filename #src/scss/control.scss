@@ -1,6 +1,20 @@
 @import "variables";
 
 .control {
+  @media (max-width: 992px) {
+    &--width_md_media_max_lg {
+      width: 200px;
+    }
+  }
+
+  &__element {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    &--padding_sm {
+      padding: 1em;
+    }
+  }
   // todo MOD
   &--flex {
     display: flex;
@@ -9,5 +23,11 @@
     position: fixed;
     top: 2em;
     right: 3em;
+  }
+  &--border_gray_sm {
+    border: 1px solid $color_secondary_sm;
+  }
+  &--border_none {
+    border: none;
   }
 }

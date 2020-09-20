@@ -151,6 +151,10 @@
   }
 
   //! color fonts
+  &--variant_dark_lg {
+    color: $color_bark_lg;
+    @include caption--color($color_bark_lg);
+  }
   &--variant_dark {
     color: $color_bark;
     @include caption--color($color_bark);
@@ -173,8 +177,13 @@
   &--variant_primary {
     color: $color_primary;
     @include caption--color($color_primary);
+    &_hover:hover {
+      color: $color_primary;
+      cursor: pointer;
+    }
   }
 
+  //! position text
   &--align_center {
     text-align: center;
     @media (min-width: 576px) {
