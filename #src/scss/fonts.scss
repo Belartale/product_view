@@ -1,39 +1,15 @@
-@include font("Montserrat-Regular", "Montserrat-Regular", "400", "normal");
 @include font("Montserrat-Light", "Montserrat-Light", "400", "normal");
+@include font("Montserrat-Bold", "Montserrat-ExtraBold", "400", "normal");
+@include font("Montserrat-Regular", "Montserrat-Regular", "400", "normal");
 @include font("Roboto-Regular", "Roboto-Regular", "400", "normal");
 
 @import "variables";
 
 @mixin caption--size($value) {
   //! transition fonts on full
+
   @media (min-width: 992px) {
     font-size: $value;
-  }
-
-  @media (min-width: 576px) {
-    &_media_sm {
-      font-size: $value;
-    }
-  }
-  @media (min-width: 768px) {
-    &_media_md {
-      font-size: $value;
-    }
-  }
-  @media (min-width: 992px) {
-    &_media_lg {
-      font-size: $value;
-    }
-  }
-  @media (min-width: 1200px) {
-    &_media_xl {
-      font-size: $value;
-    }
-  }
-  @media (min-width: 1400px) {
-    &_media_xxl {
-      font-size: $value;
-    }
   }
 }
 @mixin caption--color($value) {
@@ -71,7 +47,7 @@
   }
   //! size
   &--size_1 {
-    font-size: 2em;
+    font-size: 3em;
     @include caption--size(4.8em);
   }
   &--size_2 {
@@ -80,7 +56,7 @@
   }
   &--size_3 {
     font-size: 2em;
-    @include caption--size(3mm);
+    @include caption--size(3em);
   }
   &--size_4 {
     font-size: 1.8em;
@@ -110,6 +86,10 @@
   &--family_1 {
     font-family: "Montserrat-Regular";
   }
+  &--family_1_lg {
+    font-family: "Montserrat-Bold";
+  }
+
   &--family_2 {
     font-family: "Montserrat-Light";
   }
@@ -184,7 +164,7 @@
   }
 
   //! position text
-  &--align_center {
+  &--text_center {
     text-align: center;
     @media (min-width: 576px) {
       &_media_sm {

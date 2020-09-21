@@ -21,17 +21,25 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Regular";
+  font-family: "Montserrat-Light";
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat-Bold";
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2");
+  src: url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -69,7 +77,7 @@
 }
 
 .caption--size_1 {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .caption--size_2 {
@@ -106,6 +114,10 @@
 
 .caption--family_1 {
   font-family: "Montserrat-Regular";
+}
+
+.caption--family_1_lg {
+  font-family: "Montserrat-Bold";
 }
 
 .caption--family_2 {
@@ -181,7 +193,7 @@
   cursor: pointer;
 }
 
-.caption--align_center {
+.caption--text_center {
   text-align: center;
 }
 
@@ -2902,6 +2914,17 @@ button {
   padding: 10em 0em;
 }
 
+.section--full_screen_height {
+  height: 100vh;
+}
+
+.section--img_city {
+  background-image: url(../img/img_city.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .img {
   display: block;
   position: relative;
@@ -2957,6 +2980,10 @@ button {
   z-index: 999;
 }
 
+.red {
+  background-color: red;
+}
+
 @media (min-width: 576px) {
   .color--variant_dark_media_xm {
     background-color: #333333;
@@ -2998,42 +3025,6 @@ button {
     background-color: #00c8c8;
   }
 
-  .caption--size_1_media_sm {
-    font-size: 4.8em;
-  }
-
-  .caption--size_2_media_sm {
-    font-size: 3.6em;
-  }
-
-  .caption--size_3_media_sm {
-    font-size: 3mm;
-  }
-
-  .caption--size_4_media_sm {
-    font-size: 2.4em;
-  }
-
-  .caption--size_5_media_sm {
-    font-size: 1.8em;
-  }
-
-  .caption--size_6_media_sm {
-    font-size: 1.6em;
-  }
-
-  .caption--size_7_media_sm {
-    font-size: 1.5em;
-  }
-
-  .caption--size_8_media_sm {
-    font-size: 1.4em;
-  }
-
-  .caption--size_9_media_sm {
-    font-size: 1.3em;
-  }
-
   .caption--variant_dark_lg_media_sm {
     color: black;
   }
@@ -3058,7 +3049,7 @@ button {
     color: #00c8c8;
   }
 
-  .caption--align_center_media_sm {
+  .caption--text_center_media_sm {
     text-align: center;
   }
 
@@ -5414,42 +5405,6 @@ button {
     background-color: #00c8c8;
   }
 
-  .caption--size_1_media_md {
-    font-size: 4.8em;
-  }
-
-  .caption--size_2_media_md {
-    font-size: 3.6em;
-  }
-
-  .caption--size_3_media_md {
-    font-size: 3mm;
-  }
-
-  .caption--size_4_media_md {
-    font-size: 2.4em;
-  }
-
-  .caption--size_5_media_md {
-    font-size: 1.8em;
-  }
-
-  .caption--size_6_media_md {
-    font-size: 1.6em;
-  }
-
-  .caption--size_7_media_md {
-    font-size: 1.5em;
-  }
-
-  .caption--size_8_media_md {
-    font-size: 1.4em;
-  }
-
-  .caption--size_9_media_md {
-    font-size: 1.3em;
-  }
-
   .caption--variant_dark_lg_media_md {
     color: black;
   }
@@ -5474,7 +5429,7 @@ button {
     color: #00c8c8;
   }
 
-  .caption--align_center_media_md {
+  .caption--text_center_media_md {
     text-align: center;
   }
 
@@ -7836,31 +7791,15 @@ button {
     font-size: 4.8em;
   }
 
-  .caption--size_1_media_lg {
-    font-size: 4.8em;
-  }
-
   .caption--size_2 {
     font-size: 3.6em;
   }
 
-  .caption--size_2_media_lg {
-    font-size: 3.6em;
-  }
-
   .caption--size_3 {
-    font-size: 3mm;
-  }
-
-  .caption--size_3_media_lg {
-    font-size: 3mm;
+    font-size: 3em;
   }
 
   .caption--size_4 {
-    font-size: 2.4em;
-  }
-
-  .caption--size_4_media_lg {
     font-size: 2.4em;
   }
 
@@ -7868,15 +7807,7 @@ button {
     font-size: 1.8em;
   }
 
-  .caption--size_5_media_lg {
-    font-size: 1.8em;
-  }
-
   .caption--size_6 {
-    font-size: 1.6em;
-  }
-
-  .caption--size_6_media_lg {
     font-size: 1.6em;
   }
 
@@ -7884,23 +7815,11 @@ button {
     font-size: 1.5em;
   }
 
-  .caption--size_7_media_lg {
-    font-size: 1.5em;
-  }
-
   .caption--size_8 {
     font-size: 1.4em;
   }
 
-  .caption--size_8_media_lg {
-    font-size: 1.4em;
-  }
-
   .caption--size_9 {
-    font-size: 1.3em;
-  }
-
-  .caption--size_9_media_lg {
     font-size: 1.3em;
   }
 
@@ -7928,7 +7847,7 @@ button {
     color: #00c8c8;
   }
 
-  .caption--align_center_media_lg {
+  .caption--text_center_media_lg {
     text-align: center;
   }
 
@@ -10406,42 +10325,6 @@ button {
     background-color: #00c8c8;
   }
 
-  .caption--size_1_media_xl {
-    font-size: 4.8em;
-  }
-
-  .caption--size_2_media_xl {
-    font-size: 3.6em;
-  }
-
-  .caption--size_3_media_xl {
-    font-size: 3mm;
-  }
-
-  .caption--size_4_media_xl {
-    font-size: 2.4em;
-  }
-
-  .caption--size_5_media_xl {
-    font-size: 1.8em;
-  }
-
-  .caption--size_6_media_xl {
-    font-size: 1.6em;
-  }
-
-  .caption--size_7_media_xl {
-    font-size: 1.5em;
-  }
-
-  .caption--size_8_media_xl {
-    font-size: 1.4em;
-  }
-
-  .caption--size_9_media_xl {
-    font-size: 1.3em;
-  }
-
   .caption--variant_dark_lg_media_xl {
     color: black;
   }
@@ -10466,7 +10349,7 @@ button {
     color: #00c8c8;
   }
 
-  .caption--align_center_media_xl {
+  .caption--text_center_media_xl {
     text-align: center;
   }
 
@@ -12822,42 +12705,6 @@ button {
     background-color: #00c8c8;
   }
 
-  .caption--size_1_media_xxl {
-    font-size: 4.8em;
-  }
-
-  .caption--size_2_media_xxl {
-    font-size: 3.6em;
-  }
-
-  .caption--size_3_media_xxl {
-    font-size: 3mm;
-  }
-
-  .caption--size_4_media_xxl {
-    font-size: 2.4em;
-  }
-
-  .caption--size_5_media_xxl {
-    font-size: 1.8em;
-  }
-
-  .caption--size_6_media_xxl {
-    font-size: 1.6em;
-  }
-
-  .caption--size_7_media_xxl {
-    font-size: 1.5em;
-  }
-
-  .caption--size_8_media_xxl {
-    font-size: 1.4em;
-  }
-
-  .caption--size_9_media_xxl {
-    font-size: 1.3em;
-  }
-
   .caption--variant_dark_lg_media_xxl {
     color: black;
   }
@@ -12882,7 +12729,7 @@ button {
     color: #00c8c8;
   }
 
-  .caption--align_center_media_xxl {
+  .caption--text_center_media_xxl {
     text-align: center;
   }
 
@@ -20540,3 +20387,5 @@ button {
     background-color: #00c8c8;
   }
 }
+
+.webp .section--img_city{ background-image: url(../img/img_city.webp); }
