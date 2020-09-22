@@ -6,6 +6,11 @@
       width: 200px;
     }
   }
+  @media (max-width: 1100px) {
+    &--width_md_media_max_lg {
+      width: 190px;
+    }
+  }
 
   &__element {
     width: 100%;
@@ -15,7 +20,18 @@
       padding: 1em;
     }
   }
+  &__rating_star {
+    min-width: 1px;
+  }
+  &__body {
+  }
   // todo MOD
+  &--padding_indents_md {
+    padding: 1em;
+  }
+  &--hover_arrow:hover {
+    background-color: $color_primary;
+  }
   &--flex {
     display: flex;
   }
@@ -29,5 +45,8 @@
   }
   &--border_none {
     border: none;
+  }
+  &--cursor {
+    cursor: pointer;
   }
 }

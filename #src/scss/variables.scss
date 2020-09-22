@@ -4,6 +4,7 @@ $color_secondary: #777777;
 $color_secondary_sm: #999999;
 $color_light: #f8f8f8;
 $color_primary: #00c8c8;
+$color_brown: #575153;
 
 @mixin media_background-color($var) {
   & {
@@ -85,6 +86,10 @@ $color_primary: #00c8c8;
   // background-color: $color_bark;
   @include media_background-color($color_primary);
 }
+.color--variant_brown {
+  // background-color: $color_bark;
+  @include media_background-color($color_brown);
+}
 
 @mixin min_media($what, $howMuch) {
   @media (min-width: 576px) {
@@ -113,3 +118,31 @@ $color_primary: #00c8c8;
     }
   }
 }
+
+// @mixin media($what) {
+//   @media (min-width: 576px) {
+//     &_media_sm {
+//       #{$what};
+//     }
+//   }
+//   @media (min-width: 768px) {
+//     &_media_md {
+//       #{$what};
+//     }
+//   }
+//   @media (min-width: 992px) {
+//     &_media_lg {
+//       #{$what};
+//     }
+//   }
+//   @media (min-width: 1200px) {
+//     &_media_xl {
+//       #{$what};
+//     }
+//   }
+//   @media (min-width: 1400px) {
+//     &_media_xxl {
+//       #{$what};
+//     }
+//   }
+// }

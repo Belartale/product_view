@@ -82,6 +82,17 @@
     font-size: 1.2em;
     @include caption--size(1.3em);
   }
+
+  //
+
+  &--minus_x2 {
+    font-size: 0.5em;
+    @include caption--size(0.5em);
+  }
+  &--minus_x3 {
+    font-size: 0.33em;
+    @include caption--size(0.33em);
+  }
   //! family
   &--family_1 {
     font-family: "Montserrat-Regular";
@@ -114,6 +125,14 @@
     letter-spacing: 0.02em;
   }
 
+  //! line row
+  &--line_height_md {
+    line-height: 2.2rem;
+  }
+  &--line_height_lg {
+    line-height: 3rem;
+  }
+
   //! font-weight
   &--weight_100 {
     font-weight: 100;
@@ -128,6 +147,9 @@
   //! other
   &--uppercase {
     text-transform: uppercase;
+  }
+  &--line_through {
+    text-decoration: line-through;
   }
 
   //! color fonts
@@ -152,6 +174,10 @@
   &--variant_light {
     color: $color_light;
     @include caption--color($color_light);
+  }
+  &--variant_brown {
+    color: $color_brown;
+    @include caption--color($color_brown);
   }
 
   &--variant_primary {
@@ -192,7 +218,7 @@
       }
     }
   }
-  &--align_left {
+  &--text_left {
     text-align: left;
     @media (min-width: 576px) {
       &_media_sm {

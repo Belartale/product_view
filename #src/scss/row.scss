@@ -4,15 +4,34 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -10px;
+  margin: 0px -1em;
 
   &--relative {
     position: relative;
+
     @media (min-width: 992px) {
       &_sm_top_media_lg {
         position: relative;
         bottom: 0.6em;
       }
+    }
+  }
+  &--absolute_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &_right {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0%, -50%);
+    }
+    &_left {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0%, -50%);
     }
   }
   &--absolute_right_sm {
@@ -82,6 +101,9 @@
       }
     }
   }
+  &--justify_start {
+    @include min_media(justify-content, flex-start);
+  }
   &--justify_center {
     justify-content: center;
     @media (min-width: 992px) {
@@ -129,5 +151,131 @@
       order: $i;
       @include min_media(order, #{$i});
     }
+  }
+  @for $i from 1 through 10 {
+    &--z_#{$i} {
+      z-index: $i;
+    }
+  }
+}
+
+@mixin forRowCellSpace($marginMinus, $margin, $padding) {
+  & {
+    margin: $marginMinus;
+  }
+  & > .cell--0 {
+    padding: $padding;
+    margin: $margin;
+    @include min_media(padding, $padding);
+    @include min_media(margin, $margin);
+  }
+  @for $i from 1 through 9 {
+    & > .cell--#{"#{$i}0"} {
+      width: #{"#{$i}0%"};
+      padding: $padding;
+      margin: $margin;
+      @media (min-width: 576px) {
+        &_media_sm {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 768px) {
+        &_media_md {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 992px) {
+        &_media_lg {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1200px) {
+        &_media_xl {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1400px) {
+        &_media_xxl {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+    }
+    & > .cell--#{"#{$i}5"} {
+      width: #{"#{$i}5%"};
+      padding: $padding;
+      margin: $margin;
+      @media (min-width: 576px) {
+        &_media_sm {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 768px) {
+        &_media_md {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 992px) {
+        &_media_lg {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1200px) {
+        &_media_xl {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1400px) {
+        &_media_xxl {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+    }
+  }
+  & > .cell--100 {
+    width: 100%;
+    padding: $padding;
+    margin: $margin;
+    @include min_media(width, 100%);
+    @include min_media(padding, $padding);
+    @include min_media(margin, $margin);
+  }
+}
+
+.row--space {
+  &_sm {
+    @include forRowCellSpace(0 -0.5em, 0.5em 0em, 0 0.5em);
+  }
+  &_sm_1 {
+    @include forRowCellSpace(0 -0.7em, 0.7em 0em, 0 0.7em);
+  }
+  &_md {
+    @include forRowCellSpace(0 -1.5em, 1.5em 0em, 0 1.5em);
+  }
+
+  &_lg {
+    @include forRowCellSpace(0 -2.5em, 2.5em 0em, 0 2.5em);
+  }
+  &_lg-1 {
+    @include forRowCellSpace(0 -3em, 3em 0em, 0 3em);
   }
 }
