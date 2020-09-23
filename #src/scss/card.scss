@@ -2,7 +2,12 @@
 
 .card {
   min-width: 1px;
-  // __element_scroll
+  &--scroll {
+    // white-space: pre;
+    overflow-x: scroll;
+    // &::-webkit-scrollbar-thumb {
+    // }
+  }
 
   &__element {
     &_details--arrow_right {
@@ -14,12 +19,12 @@
       }
 
       & summary::after {
-        content: "⌵";
+        content: $arrowOpen;
         margin-left: 7px;
       }
 
       &[open] summary::after {
-        content: "<";
+        content: $arrowClose;
         position: relative;
       }
     }
@@ -42,17 +47,18 @@
       }
 
       & summary::after {
-        content: "⌵";
+        content: $arrowOpen;
         position: absolute;
         left: 0;
         top: 20px;
       }
 
       &[open] summary::after {
-        content: "<";
+        content: $arrowClose;
       }
     }
-    &_scroll {
+
+    &_scroll_burger_menu {
       // white-space: pre;
       overflow-x: scroll;
       &::-webkit-scrollbar-thumb {
@@ -72,5 +78,37 @@
   }
   &--inline {
     display: inline;
+  }
+
+  &--padding_sm {
+    padding: 0.5em;
+  }
+
+  &--border {
+    $number: 0.1em;
+
+    &_circle {
+      border-radius: 50%;
+    }
+
+    &_sm {
+      border: $number solid $color_secondary_md;
+    }
+    &_top_sm {
+      border-top: $number solid $color_secondary_md;
+    }
+    &_bottom_sm {
+      border-bottom: $number solid $color_secondary_md;
+    }
+    &_right_sm {
+      border-right: $number solid $color_secondary_md;
+    }
+    &_left_sm {
+      border-left: $number solid $color_secondary_md;
+    }
+
+    &_lg {
+      border: $number solid $color_bark;
+    }
   }
 }

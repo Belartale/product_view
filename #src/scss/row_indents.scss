@@ -461,11 +461,11 @@
 .row {
   &--margin_top_none {
     margin-top: 0em !important;
-    @include min_media(margin-top, 0em);
+    @include min_media(margin-top, 0em !important);
   }
   &--margin_bottom_none {
     margin-bottom: 0em !important;
-    @include min_media(margin-bottom, 0em);
+    @include min_media(margin-bottom, 0em !important);
   }
   //! xm
   &--margin_top_xm-1_em {

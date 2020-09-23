@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="./slick-1.8.1/slick/slick-theme.css"/>
-    <link rel="stylesheet" href="./slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="./plugins/slick-1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./plugins/slick-1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/style.min.css"/>
   </head>
   <body>
@@ -33,7 +33,7 @@
                       <h1 class="caption caption--family_1 caption--size_4 caption--uppercase caption--spacing_3"><span class="caption--family_1_lg">avenue</span> fashion</h1></a></div>
                   <div class="cell cell--100 cell--85_media_lg cell--75_media_xl">
                     <div class="card">
-                      <div class="card__element_scroll row--flex row--flex_nowrap row_media_lg row--justify_end_media_lg">
+                      <div class="card__element_scroll_burger_menu row--flex row--flex_nowrap row_media_lg row--justify_end_media_lg">
                         <div class="cell cell--sides_sm cell--sides_md_media_xxl row--order_2 row--order_1_media_lg">
                           <details class="card__element_details--arrow_bottom">
                             <summary class="card__element_summary caption--family_1 caption--size_9 caption--variant_light caption--variant_dark_media_lg">
@@ -150,7 +150,7 @@
             </div>
           </div>
           <div class="cell cell--100 cell--50_media_xl">
-            <div class="row row--space_md">
+            <div class="row">
               <div class="cell cell--100 row--margin_top_none">
                 <h1 class="caption caption--size_5 caption--family_1 caption--uppercase caption--variant_brown caption--text_center caption--text_left_media_xl">Ave classic sweatshirt</h1>
               </div>
@@ -200,10 +200,10 @@
                       </svg></a></div>
                 </div>
               </div>
-              <div class="call cell--100">
-                <h2 class="caption caption--size_3 caption--family_2 caption--variant_secondary_sm caption--spacing_3 caption--text_center caption--text_left_media_xl"><span class="caption--line_through"><sup class="caption--minus_x2">£</sup>107</span>  <sup class="caption--minus_x2">£</sup>89.99</h2>
+              <div class="call cell--100 caption--text_center caption--text_left_media_xl row--margin_top_none">
+                <h2 class="caption caption--size_3 caption--family_2 caption--variant_secondary_sm caption--spacing_3"><span class="caption--line_through"><sup class="caption--minus_x2">£</sup>107</span>  <sup class="caption--minus_x2">£</sup>89.99</h2>
               </div>
-              <div class="cell cell--100">
+              <div class="cell cell--100 cell--40_media_md cell--60_media_xl caption--text_center caption--text_left_media_md cell--vertical_none_media_xl">
                 <div class="row">
                   <div class="cell cell--100">
                     <h3 class="caption caption--family_9 caption--family_1"><span class="caption--family_1_lg caption--variant_brown caption--uppercase">Availability:</span> <span class="caption--variant_secondary">In stock</span></h3>
@@ -216,7 +216,7 @@
                   </div>
                 </div>
               </div>
-              <div class="cell cell--100">
+              <div class="cell cell--100 cell--60_media_md cell--100_media_xl caption--text_center caption--text_left_media_md cell--vertical_none_media_xl">
                 <div class="row">
                   <div class="cell cell--100">
                     <p class="caption caption--size_7 caption--family_3 caption--variant_secondary caption--line_height_md">Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh suspendisse est congue metus nunc, id viverra elit loreti rhoncus quis consecteur es. Donec pulvinar tempor lorem a pretium justo interdum.</p>
@@ -231,13 +231,135 @@
                   </div>
                 </div>
               </div>
+              <div class="cell cell--100 cell--vertical_none_media_xl">
+                <form class="control form_parameters row row--space_md row--justify_center row--justify_start_media_sm" action="*.*">
+                  <div class="cell cell--50 cell--40_media_sm cell--35_media_xl">
+                    <label class="caption caption--size_9 caption--family_1_lg caption--variant_brown caption--uppercase" for="form_parameters__color">colour</label>
+                    <div class="row--relative control__element--arrow_absolute_right row--margin_top_sm-1_em">
+                      <select class="control control__element control__element--padding_sm control--none_marker card--border_sm" name="size" from="form_parameters" id="form_parameters__color" required="required">
+                        <option class="caption caption--size_9 caption--family_2 caption--variant_secondary" value="#{i}">Color Black </option>
+                        <option class="caption caption--size_9 caption--family_2 caption--variant_secondary" value="#{i}">Color Gray </option>
+                        <option class="caption caption--size_9 caption--family_2 caption--variant_secondary" value="#{i}">Color White </option>
+                        <option class="caption caption--size_9 caption--family_2 caption--variant_secondary" value="#{i}">Color Red </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="cell cell--50 cell--40_media_sm cell--35_media_xl">
+                    <label class="caption caption--size_9 caption--family_1_lg caption--variant_brown caption--uppercase" for="form_parameters__size">size</label>
+                    <div class="row--relative control__element--arrow_absolute_right row--margin_top_sm-1_em">
+                      <select class="control control__element control__element--padding_sm control--none_marker card--border_sm" name="size" from="form_parameters" id="form_parameters__size" required="required">
+                        <option class="caption caption--size_9 caption--family_2 caption--variant_secondary" value="#{i}">Size XM </option>
+                        <option class="caption caption--size_9 caption--family_2 caption--variant_secondary" value="#{i}">Size SM </option>
+                        <option class="caption caption--size_9 caption--family_2 caption--variant_secondary" value="#{i}">Size MD </option>
+                        <option class="caption caption--size_9 caption--family_2 caption--variant_secondary" value="#{i}">Size LG </option>
+                        <option class="caption caption--size_9 caption--family_2 caption--variant_secondary" value="#{i}">Size XL </option>
+                        <option class="caption caption--size_9 caption--family_2 caption--variant_secondary" value="#{i}">Size XXL </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="cell cell--0">
+                    <label class="caption caption--size_9 caption--family_1_lg caption--variant_brown caption--uppercase" for="form_parameters__size">size</label>
+                    <div class="row--flex row--relative row--margin_top_sm-1_em card--border_sm cell--width_md">
+                      <div class="cell--50_indents_none">
+                        <input class="control control__element control__element--padding_xm control--none_marker" name="qty" from="form_parameters" id="form_parameters__qty" required="required" type="number"/>
+                      </div>
+                      <div class="cell--50_indents_none row--block">
+                        <button class="control control--width_full control--height_half row--relative card--border_left_sm card--border_bottom_sm" type="button" id="control-input-plus">
+                          <div class="control__element control__element--arrow_absolute_center img--deg_180"></div>
+                        </button>
+                        <button class="control control--width_full control--height_half row--relative card--border_left_sm" type="button" id="control-input-minus">
+                          <div class="control__element control__element--arrow_absolute_center"></div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell cell--100 row--margin_bottom_none_media_xl">
+                    <div class="row">
+                      <div class="cell cell--100 cell--45_media_sm">
+                        <button class="control control__element color--variant_dark caption--size_0 control__element--padding_sm control--cursor" type="button">
+                          <div class="row row--align-center row--justify_center">
+                            <div class="cell cell--0">
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.8em" height="1.5em">
+                                <image x="0px" y="0px" width="1.8em" height="1.5em" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPCAQAAABDj1eZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkCRQULSZ6YoUzAAAAi0lEQVQoz62Q0Q0CIRBEn5drgFpogRZoQVuwBGqxhitBWqAEKWH8ABQV7n4cEshOXmaXRUFFTszOSRYHBBKJkTKXRt81l1sqv7GjBsW/QYl8DM2zMml9FRuumaR6l5f3yryks8x4mS3phif+TBa5wvphGcywqpFGD0mha9I5C/tyfRKy8l8DW/nykSc9Qo3W4MYHWgAAAABJRU5ErkJggg=="></image>
+                              </svg>
+                            </div>
+                            <div class="cell cell--0 caption--size_0">
+                              <p class="caption caption--size_6 caption--family_1 caption--spacing_1 caption--uppercase caption--variant_light">Add to Cart</p>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="cell cell--100 cell--55_media_sm">
+                        <button class="control control__element caption--size_0 control__element--padding_sm card--border_lg control--cursor" type="button" id="heartExcuseButton">
+                          <div class="row row--align-center row--justify_center">
+                            <div class="cell cell--0" id="heartExcuseBox">
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.8em" height="1.6em">
+                                <image x=".0em" y=".0em" width="1.8em" height="1.6em" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAMAAAAs2N9uAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAM1BMVEVFRkdFRkdFRkdFRkdFRkdFRkdFRkdFRkdFRkdFRkdFRkdFRkdFRkdFRkdFRkdFRkf///8FyYTLAAAAD3RSTlMAEVV3ZkTuIsy7md2IM6qgLGHWAAAAAWJLR0QQlbINLAAAAAd0SU1FB+QJFxQ5IkEUOZEAAAB9SURBVBjTVY9bFsQgCEODKIi2w/53O6h92PzEcwkaAVDiTAgV5jIc2UPC0DoOFsPiTaHNTXqKBamA2cymOR+JAj8mwknLnR90K5DVD0l+xjJvhPq4unl6iYkO/3m+SZXVFce1S31lXqYbATiqqHTd32Zv0unbMF8f2nU+5A+OGwOmGkomXAAAAABJRU5ErkJggg=="></image>
+                              </svg>
+                            </div>
+                            <div class="cell cell--0 caption--size_0">
+                              <p class="caption caption--size_6 caption--family_1 caption--spacing_1 caption--uppercase caption--variant_dark">Add to LookBook</p>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell cell--100 row--margin_top_none_media_xl">
+                    <button class="control caption--size_0 control__element--padding_sm control--cursor" type="button">
+                      <div class="row row--align-center row--justify_center">
+                        <div class="cell cell--0">
+                          <div class="card color--variant_secondary_md card--border_circle row--block card--padding_sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.5em" height="1.6em">
+                              <image x=".0em" y=".0em" width="1.5em" height="1.6em" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAQAAABjX+2PAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkCRQUJw61OMVDAAAAjElEQVQY03WRQRGDMBQFd5gaiIVYQAsWYoFaQEI1VAIWqIRaKBK2hwIhodl/SnbeSyZBGhOM0pZvP8Z6OzlsUjXVelbTJsdr+ezOKG39+K3b6UHkBkBPAGBlZWfkCYi9mVS2dcCL6cgECjoAplPpRQeWOpV1YCEC99MRGZf8CCZDeTUcDvlnEGPzU/kC2XTS7VtDyNsAAAAASUVORK5CYII="></image>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="cell cell--0">
+                          <p class="caption caption--size_8 caption--family_1 caption--spacing_1 caption--uppercase caption--variant_dark">Add to compare</p>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="cell cell--100">
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, 'tab_item_1')">London</button>
+              <button class="tablinks" onclick="openCity(event, 'tab_item_2')">Pari</button>
+              <button class="tablinks" onclick="openCity(event, 'tab_item_3')">Tokyo</button>
+              <button class="tablinks" onclick="openCity(event, 'tab_item_4')">Tokyo</button>
+              <button class="tablinks" onclick="openCity(event, 'tab_item_5')">Tokyo</button>
+            </div>
+            <div class="tabcontent" id="tab_item_1">
+              <h3>London</h3>
+              <p>London is the capital city of England.</p>
+            </div>
+            <div class="tabcontent" id="tab_item_2">
+              <h3>Paris</h3>
+              <p>Paris is the capital of France.</p>
+            </div>
+            <div class="tabcontent" id="tab_item_3">
+              <h3>Tokyo</h3>
+              <p>Tokyo is the capital of Japan.</p>
+            </div>
+            <div class="tabcontent" id="tab_item_4">
+              <h3>Tokyo</h3>
+              <p>Tokyo is the capital of Japan.</p>
+            </div>
+            <div class="tabcontent" id="tab_item_5">
+              <h3>Tokyo</h3>
+              <p>Tokyo is the capital of Japan.</p>
             </div>
           </div>
         </div>
       </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./plugins/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

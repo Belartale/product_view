@@ -1,6 +1,8 @@
 @import "variables";
 
 .control {
+  background-color: transparent;
+
   @media (max-width: 992px) {
     &--width_md_media_max_lg {
       width: 200px;
@@ -12,20 +14,65 @@
     }
   }
 
+  //   input::-webkit-outer-spin-button,
+  // input::-webkit-inner-spin-button {
+  //   -webkit-appearance: none;
+  // }
+
   &__element {
     width: 100%;
     height: 100%;
     background-color: transparent;
+    border: none;
+
+    &--arrow_absolute_center::after {
+      content: $arrowOpen;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+    }
+    &--arrow_absolute_right::after {
+      content: $arrowOpen;
+      position: absolute;
+      top: 50%;
+      right: 1em;
+      transform: translate(0%, -50%);
+      z-index: 5;
+    }
+
+    &--padding_xm {
+      padding: 1em 0.5em;
+    }
     &--padding_sm {
       padding: 1em;
+    }
+    &--padding_md {
+      padding: 2em;
     }
   }
   &__rating_star {
     min-width: 1px;
   }
   &__body {
+    min-width: 1px;
   }
   // todo MOD
+  &--none_marker {
+    appearance: none;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+  }
+  &--height_half {
+    height: 50%;
+  }
+  &--width_full {
+    width: 100%;
+  }
   &--padding_indents_md {
     padding: 1em;
   }

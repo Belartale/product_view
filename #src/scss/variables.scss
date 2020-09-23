@@ -1,10 +1,17 @@
 $color_bark_lg: black;
 $color_bark: #333333;
+$color_bark_md: #454647;
+
 $color_secondary: #777777;
 $color_secondary_sm: #999999;
+$color_secondary_md: #e7e7e7;
+
 $color_light: #f8f8f8;
 $color_primary: #00c8c8;
 $color_brown: #575153;
+
+$arrowOpen: "⌵";
+$arrowClose: "<";
 
 @mixin media_background-color($var) {
   & {
@@ -65,29 +72,27 @@ $color_brown: #575153;
 
 //! color background
 .color--variant_dark {
-  // background-color: $color_bark;
   @include media_background-color($color_bark);
 }
 
 .color--variant_secondary {
-  // background-color: $color_secondary;
   @include media_background-color($color_secondary);
 }
 .color--variant_secondary_sm {
   @include media_background-color($color_secondary_sm);
 }
+.color--variant_secondary_md {
+  @include media_background-color($color_bark_md);
+}
 
 .color--variant_light {
-  // background-color: $color_light;
   @include media_background-color($color_light);
 }
 
 .color--variant_primary {
-  // background-color: $color_bark;
   @include media_background-color($color_primary);
 }
 .color--variant_brown {
-  // background-color: $color_bark;
   @include media_background-color($color_brown);
 }
 
@@ -119,30 +124,111 @@ $color_brown: #575153;
   }
 }
 
-// @mixin media($what) {
-//   @media (min-width: 576px) {
-//     &_media_sm {
-//       #{$what};
-//     }
-//   }
-//   @media (min-width: 768px) {
-//     &_media_md {
-//       #{$what};
-//     }
-//   }
-//   @media (min-width: 992px) {
-//     &_media_lg {
-//       #{$what};
-//     }
-//   }
-//   @media (min-width: 1200px) {
-//     &_media_xl {
-//       #{$what};
-//     }
-//   }
-//   @media (min-width: 1400px) {
-//     &_media_xxl {
-//       #{$what};
-//     }
-//   }
-// }
+@mixin forRowCellSpace($marginMinus, $margin, $padding) {
+  & {
+    margin: $marginMinus;
+  }
+  & > .cell--0 {
+    padding: $padding;
+    margin: $margin;
+    @include min_media(padding, $padding);
+    @include min_media(margin, $margin);
+  }
+  & > .cell--33 {
+    width: 33.33%;
+    padding: $padding;
+    margin: $margin;
+    @include min_media(padding, $padding);
+    @include min_media(margin, $margin);
+  }
+  & > .cell--100 {
+    width: 100%;
+    padding: $padding;
+    margin: $margin;
+    @include min_media(width, 100%);
+    @include min_media(padding, $padding);
+    @include min_media(margin, $margin);
+  }
+  @for $i from 1 through 9 {
+    & > .cell--#{"#{$i}0"} {
+      width: #{"#{$i}0%"};
+      padding: $padding;
+      margin: $margin;
+      @media (min-width: 576px) {
+        &_media_sm {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 768px) {
+        &_media_md {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 992px) {
+        &_media_lg {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1200px) {
+        &_media_xl {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1400px) {
+        &_media_xxl {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+    }
+    & > .cell--#{"#{$i}5"} {
+      width: #{"#{$i}5%"};
+      padding: $padding;
+      margin: $margin;
+      @media (min-width: 576px) {
+        &_media_sm {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 768px) {
+        &_media_md {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 992px) {
+        &_media_lg {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1200px) {
+        &_media_xl {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1400px) {
+        &_media_xxl {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+    }
+  }
+}

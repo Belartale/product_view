@@ -6,9 +6,12 @@
   flex-wrap: wrap;
   margin: 0px -1em;
 
+  &--block > * {
+    display: block;
+  }
+
   &--relative {
     position: relative;
-
     @media (min-width: 992px) {
       &_sm_top_media_lg {
         position: relative;
@@ -156,108 +159,6 @@
     &--z_#{$i} {
       z-index: $i;
     }
-  }
-}
-
-@mixin forRowCellSpace($marginMinus, $margin, $padding) {
-  & {
-    margin: $marginMinus;
-  }
-  & > .cell--0 {
-    padding: $padding;
-    margin: $margin;
-    @include min_media(padding, $padding);
-    @include min_media(margin, $margin);
-  }
-  @for $i from 1 through 9 {
-    & > .cell--#{"#{$i}0"} {
-      width: #{"#{$i}0%"};
-      padding: $padding;
-      margin: $margin;
-      @media (min-width: 576px) {
-        &_media_sm {
-          width: #{"#{$i}0%"};
-          padding: $padding;
-          margin: $margin;
-        }
-      }
-      @media (min-width: 768px) {
-        &_media_md {
-          width: #{"#{$i}0%"};
-          padding: $padding;
-          margin: $margin;
-        }
-      }
-      @media (min-width: 992px) {
-        &_media_lg {
-          width: #{"#{$i}0%"};
-          padding: $padding;
-          margin: $margin;
-        }
-      }
-      @media (min-width: 1200px) {
-        &_media_xl {
-          width: #{"#{$i}0%"};
-          padding: $padding;
-          margin: $margin;
-        }
-      }
-      @media (min-width: 1400px) {
-        &_media_xxl {
-          width: #{"#{$i}0%"};
-          padding: $padding;
-          margin: $margin;
-        }
-      }
-    }
-    & > .cell--#{"#{$i}5"} {
-      width: #{"#{$i}5%"};
-      padding: $padding;
-      margin: $margin;
-      @media (min-width: 576px) {
-        &_media_sm {
-          width: #{"#{$i}5%"};
-          padding: $padding;
-          margin: $margin;
-        }
-      }
-      @media (min-width: 768px) {
-        &_media_md {
-          width: #{"#{$i}5%"};
-          padding: $padding;
-          margin: $margin;
-        }
-      }
-      @media (min-width: 992px) {
-        &_media_lg {
-          width: #{"#{$i}5%"};
-          padding: $padding;
-          margin: $margin;
-        }
-      }
-      @media (min-width: 1200px) {
-        &_media_xl {
-          width: #{"#{$i}5%"};
-          padding: $padding;
-          margin: $margin;
-        }
-      }
-      @media (min-width: 1400px) {
-        &_media_xxl {
-          width: #{"#{$i}5%"};
-          padding: $padding;
-          margin: $margin;
-        }
-      }
-    }
-  }
-  & > .cell--100 {
-    width: 100%;
-    padding: $padding;
-    margin: $margin;
-    @include min_media(width, 100%);
-    @include min_media(padding, $padding);
-    @include min_media(margin, $margin);
   }
 }
 

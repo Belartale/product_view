@@ -1,0 +1,42 @@
+//- <div class="tab">
+//-   <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+//-   <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+//-   <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+//- </div>
+
+//- <div id="London" class="tabcontent">
+//-   <h3>London</h3>
+//-   <p>London is the capital city of England.</p>
+//- </div>
+
+//- <div id="Paris" class="tabcontent">
+//-   <h3>Paris</h3>
+//-   <p>Paris is the capital of France.</p> 
+//- </div>
+
+//- <div id="Tokyo" class="tabcontent">
+//-   <h3>Tokyo</h3>
+//-   <p>Tokyo is the capital of Japan.</p>
+//- </div>
+
+.tab
+  button.tablinks(onclick="openCity(event, 'tab_item_1')") London
+  button.tablinks(onclick="openCity(event, 'tab_item_2')") Pari
+  button.tablinks(onclick="openCity(event, 'tab_item_3')") Tokyo
+  button.tablinks(onclick="openCity(event, 'tab_item_4')") Tokyo
+  button.tablinks(onclick="openCity(event, 'tab_item_5')") Tokyo
+#tab_item_1.tabcontent
+  h3 London
+  p London is the capital city of England.
+#tab_item_2.tabcontent
+  h3 Paris
+  p Paris is the capital of France.
+#tab_item_3.tabcontent
+  h3 Tokyo
+  p Tokyo is the capital of Japan.
+#tab_item_4.tabcontent
+  h3 Tokyo
+  p Tokyo is the capital of Japan.
+#tab_item_5.tabcontent
+  h3 Tokyo
+  p Tokyo is the capital of Japan.
