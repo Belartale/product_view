@@ -14,11 +14,6 @@
     }
   }
 
-  //   input::-webkit-outer-spin-button,
-  // input::-webkit-inner-spin-button {
-  //   -webkit-appearance: none;
-  // }
-
   &__element {
     width: 100%;
     height: 100%;
@@ -86,7 +81,6 @@
   }
 
   &--hover_arrow:hover {
-    // background-color: $color_primary;
     background-color: $color_variant_50;
   }
   &--flex {

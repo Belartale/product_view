@@ -162,34 +162,6 @@
     white-space: nowrap;
   }
 
-  // //! color fonts
-  // &--variant_dark_lg {
-  //   color: $color_bark_lg;
-  //   @include caption--color($color_bark_lg);
-  // }
-  // &--variant_dark {
-  //   color: $color_bark;
-  //   @include caption--color($color_bark);
-  // }
-
-  // &--variant_secondary {
-  //   color: $color_secondary;
-  //   @include caption--color($color_secondary);
-  // }
-  // &--variant_secondary_sm {
-  //   color: $color_secondary_sm;
-  //   @include caption--color($color_secondary_sm);
-  // }
-
-  // &--variant_light {
-  //   color: $color_light;
-  //   @include caption--color($color_light);
-  // }
-  // &--variant_brown {
-  //   color: $color_brown;
-  //   @include caption--color($color_brown);
-  // }
-
   &--variant_variant_50 {
     color: $color_variant_50;
     @include caption--color($color_variant_50);

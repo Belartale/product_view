@@ -3,10 +3,7 @@
 .card {
   min-width: 1px;
   &--scroll {
-    // white-space: pre;
     overflow-x: auto;
-    // &::-webkit-scrollbar-thumb {
-    // }
   }
 
   &__element {
@@ -30,7 +27,6 @@
     }
     &_details--arrow_bottom {
       &:hover {
-        // color: $color_primary;
         color: $color_variant_50;
       }
       & summary::-webkit-details-marker {
@@ -60,11 +56,8 @@
     }
 
     &_scroll_burger_menu {
-      // white-space: pre;
       overflow-x: scroll;
       &::-webkit-scrollbar-thumb {
-        // color: $color_primary;
-        // background-color: $color_primary;
         color: $color_variant_50;
         background-color: $color_variant_50;
       }
@@ -104,24 +97,18 @@
     }
 
     &_sm {
-      // border: $number solid $color_secondary_md;
-      // border: $number solid $color_variant_20;
       border: $number solid $border;
     }
     &_top_sm {
-      // border-top: $number solid $color_secondary_md;
       border-top: $number solid $border;
     }
     &_bottom_sm {
-      // border-bottom: $number solid $color_secondary_md;
       border-bottom: $number solid $border;
     }
     &_right_sm {
-      // border-right: $number solid $color_secondary_md;
       border-right: $number solid $border;
     }
     &_left_sm {
-      // border-left: $number solid $color_secondary_md;
       border-left: $number solid $border;
     }
 

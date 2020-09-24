@@ -1,44 +1,28 @@
-// $color_bark_lg: black;
-// $color_bark: #333333;
-// $color_bark_md: #454647;
-
-// $color_secondary: #777777;
-// $color_secondary_sm: #999999;
-// $color_secondary_md: #e7e7e7;
-
-// $color_light: #f8f8f8;
-// $color_primary: #00c8c8;
-// $color_brown: #575153;
-
-// $color_white: white;
-
-// todo all color my pages
-
 $color_variant_1: black;
-$color_variant_2: #222222; // лого //! 4
-$color_variant_3: #333333; // блек всё!!! //! 5
-$color_variant_4: #454647; //текст внутри ЛАЙКА   //! 12 *******14 КРУГ 2 СТРЕЛЫ текст
+$color_variant_2: #222222;
+$color_variant_3: #333333;
+$color_variant_4: #454647;
 
-$color_variant_20: #727272; //круг ДВЕ СТРЕЛЫ   //! 13 ************16 скрол под ЗАГОЛОВОК ТЕКСТА *******17 пять колонок текст
-$color_variant_21: #777777; //лого не лого //! 1 ****19 правый текст ФУТЕР
-$color_variant_22: #8e8c8c; // внизу текст под ТЕКСТОМ ЦЕНЫ   //! 11 *******17 тектс строла (много текста)
-$color_variant_23: #999999; //рядом с лого не лого //! 2 *****18 левый текст ФУТЕР
-$color_variant_24: #9a9a9a; //цена   //! 10
+$color_variant_20: #727272;
+$color_variant_21: #777777;
+$color_variant_22: #8e8c8c;
+$color_variant_23: #999999;
+$color_variant_24: #9a9a9a;
 
-$color_variant_25: #989898; // текст внутри инпута   //! 7
-$color_variant_26: #e7e7e7; // бордер инпут //! 6
-$color_variant_27: #cccccc; //внизу текст под ТЕКСТОМ ТЕКСТОМ ЦЕНЫ (список)   //! 12
-$color_variant_28: #f8f8f8; // фон скрола //! 15
+$color_variant_25: #989898;
+$color_variant_26: #e7e7e7;
+$color_variant_27: #cccccc;
+$color_variant_28: #f8f8f8;
 
-$color_variant_40: #575153; // Н1 и слайдер стрелки //? коричневый   //! 8
+$color_variant_40: #575153;
 
-$color_variant_50: #00c8c8; //ховеры //! 3
+$color_variant_50: #00c8c8;
 
-$color_variant_60: #ded3aa; // текст звезды рейтинг   //! 9
+$color_variant_60: #ded3aa;
 
-$color_variant_70: #720b0b; //ховеры //! 3
+$color_variant_70: #720b0b;
 
-$color_variant_100: #ffffff; //!
+$color_variant_100: #ffffff;
 
 $arrowOpen: "⌵";
 $arrowClose: "<";
@@ -99,32 +83,6 @@ $arrowClose: "<";
     }
   }
 }
-
-// //! color background
-// .color--variant_dark {
-//   @include media_background-color($color_bark);
-// }
-
-// .color--variant_secondary {
-//   @include media_background-color($color_secondary);
-// }
-// .color--variant_secondary_sm {
-//   @include media_background-color($color_secondary_sm);
-// }
-// .color--variant_secondary_md {
-//   @include media_background-color($color_bark_md);
-// }
-
-// .color--variant_light {
-//   @include media_background-color($color_light);
-// }
-
-// .color--variant_primary {
-//   @include media_background-color($color_primary);
-// }
-// .color--variant_brown {
-//   @include media_background-color($color_brown);
-// }
 
 @mixin min_media($what, $howMuch) {
   @media (min-width: 576px) {

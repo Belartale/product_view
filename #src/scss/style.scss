@@ -61,9 +61,6 @@ $wrapperWidth: 0em 2em;
     max-width: 1800px;
     margin: 0 auto;
     padding: $wrapperWidth;
-    // @media (min-width: 992px) {
-    //   padding: 0px 20px;
-    // }
   }
   &_hidden {
     @extend .wrapper;
@@ -117,8 +114,6 @@ $wrapperWidth: 0em 2em;
   display: block;
   max-width: 100%;
   height: 100%;
-  // display: block;
-  // position: relative;
   object-fit: cover;
   &__element {
     position: absolute;
@@ -153,55 +148,6 @@ $wrapperWidth: 0em 2em;
     }
   }
 }
-
-// todoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-
-// .mt10 {
-//   margin-top: 10px;
-// }
-// .no {
-//   margin: 0px !important;
-//   padding: 0px !important;
-// }
-// .ms-20 {
-//   margin: 0 20px;
-// }
-
-// .fac {
-//   display: flex;
-//   align-items: center;
-// }
-
-// .pa {
-//   position: absolute;
-//   z-index: 999;
-// }
-// .red {
-//   background-color: red;
-// }
-// .cr svg {
-//   background-color: red;
-//   color: red;
-//   fill: red;
-// }
-// .cr image {
-//   background-color: red;
-//   color: red;
-//   fill: rgb(255, 0, 0);
-// }
-// .r {
-//   right: 0px;
-// }
-// .in {
-//   appearance: none;
-// }
-// .w {
-//   height: 100% !important;
-// }
-// .mt0 {
-//   margin-top: 0px !important;
-// }
-//todoooooooooooooooooooooooooooooooooooooooooooooooo
 
 .tab {
   overflow: hidden;
