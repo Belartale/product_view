@@ -68,4 +68,7 @@
 }
 .header_bottom_part {
   grid-area: header_bottom_part;
+  @media (min-width: 992px) {
+    padding: 4em 0em 5.5em;
+  }
 }

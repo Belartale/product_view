@@ -59,6 +59,14 @@
     min-width: 1px;
   }
   // todo MOD
+
+  &--indents_lg {
+    padding: 3em 1em;
+    @media (min-width: 992px) {
+      padding: 6em 2em;
+    }
+  }
+
   &--none_marker {
     appearance: none;
     &::-webkit-outer-spin-button,
@@ -76,8 +84,10 @@
   &--padding_indents_md {
     padding: 1em;
   }
+
   &--hover_arrow:hover {
-    background-color: $color_primary;
+    // background-color: $color_primary;
+    background-color: $color_variant_50;
   }
   &--flex {
     display: flex;
@@ -88,7 +98,7 @@
     right: 3em;
   }
   &--border_gray_sm {
-    border: 1px solid $color_secondary_sm;
+    border: 1px solid $color_variant_26;
   }
   &--border_none {
     border: none;

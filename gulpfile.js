@@ -25,7 +25,7 @@ let path = {
     js: source_folder + "/js/script.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",
-    plugins: source_folder + "/plugins/**/*",
+    plugins: source_folder + "/plugins/**/*.*",
   },
   watch: {
     pug: source_folder + "/**/*.pug",
@@ -71,6 +71,13 @@ function browserSync(params) {
     port: 3000,
     notify: false,
   });
+}
+
+function plugins() {
+  // src(path.src.plugins).pipe(dest(path.build.plugins));
+  return src(path.src.plugins)
+    .pipe(dest(path.build.plugins))
+    .pipe(browsersync.stream());
 }
 
 function funPug() {
@@ -226,23 +233,16 @@ function clean(params) {
   return del(path.clean);
 }
 
-//
-function plugins() {
-  return src(path.src.plugins)
-    .pipe(dest(path.build.plugins))
-    .pipe(browsersync.stream());
-}
-//
-
 let build = gulp.series(
   clean,
   funPug,
+  plugins,
   gulp.parallel(css, html, js, images, fonts),
-  fontsStyle,
-  plugins
+  fontsStyle
 ); //before
 let watch = gulp.parallel(build, browserSync, watchFiles); //after
 
+exports.plugins = plugins;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;

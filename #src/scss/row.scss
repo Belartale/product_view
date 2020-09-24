@@ -118,11 +118,7 @@
 
   &--justify_between {
     justify-content: space-between;
-    @media (min-width: 992px) {
-      &_media_lg {
-        justify-content: space-between;
-      }
-    }
+    @include min_media(justify-content, space-between);
   }
   &--justify_evenly {
     justify-content: space-evenly;
@@ -179,4 +175,9 @@
   &_lg-1 {
     @include forRowCellSpace(0 -3em, 3em 0em, 0 3em);
   }
+
+  &_xl {
+    @include forRowCellSpace(0 -3.5em, 3.5em 0em, 0 3.5em);
+  }
 }
+//.row--space_xl {

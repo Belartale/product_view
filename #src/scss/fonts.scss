@@ -14,6 +14,9 @@
 }
 @mixin caption--color($value) {
   //! color media
+  & {
+    color: $value;
+  }
   @media (min-width: 576px) {
     &_media_sm {
       color: $value;
@@ -131,10 +134,10 @@
 
   //! line row
   &--line_height_md {
-    line-height: 2.2rem;
+    line-height: 2.2rem; //? 22
   }
   &--line_height_lg {
-    line-height: 3rem;
+    line-height: 3rem; //? 30
   }
 
   //! font-weight
@@ -155,40 +158,43 @@
   &--line_through {
     text-decoration: line-through;
   }
-
-  //! color fonts
-  &--variant_dark_lg {
-    color: $color_bark_lg;
-    @include caption--color($color_bark_lg);
-  }
-  &--variant_dark {
-    color: $color_bark;
-    @include caption--color($color_bark);
+  &--none_row {
+    white-space: nowrap;
   }
 
-  &--variant_secondary {
-    color: $color_secondary;
-    @include caption--color($color_secondary);
-  }
-  &--variant_secondary_sm {
-    color: $color_secondary_sm;
-    @include caption--color($color_secondary_sm);
-  }
+  // //! color fonts
+  // &--variant_dark_lg {
+  //   color: $color_bark_lg;
+  //   @include caption--color($color_bark_lg);
+  // }
+  // &--variant_dark {
+  //   color: $color_bark;
+  //   @include caption--color($color_bark);
+  // }
 
-  &--variant_light {
-    color: $color_light;
-    @include caption--color($color_light);
-  }
-  &--variant_brown {
-    color: $color_brown;
-    @include caption--color($color_brown);
-  }
+  // &--variant_secondary {
+  //   color: $color_secondary;
+  //   @include caption--color($color_secondary);
+  // }
+  // &--variant_secondary_sm {
+  //   color: $color_secondary_sm;
+  //   @include caption--color($color_secondary_sm);
+  // }
 
-  &--variant_primary {
-    color: $color_primary;
-    @include caption--color($color_primary);
+  // &--variant_light {
+  //   color: $color_light;
+  //   @include caption--color($color_light);
+  // }
+  // &--variant_brown {
+  //   color: $color_brown;
+  //   @include caption--color($color_brown);
+  // }
+
+  &--variant_variant_50 {
+    color: $color_variant_50;
+    @include caption--color($color_variant_50);
     &_hover:hover {
-      color: $color_primary;
+      color: $color_variant_50;
       cursor: pointer;
     }
   }
@@ -249,5 +255,62 @@
         text-align: left;
       }
     }
+  }
+}
+
+.caption {
+  &--color_variant_1 {
+    @include caption--color($color_variant_1);
+  }
+  &--color_variant_2 {
+    @include caption--color($color_variant_2);
+  }
+  &--color_variant_3 {
+    @include caption--color($color_variant_3);
+  }
+  &--color_variant_4 {
+    @include caption--color($color_variant_4);
+  }
+  &--color_variant_20 {
+    @include caption--color($color_variant_20);
+  }
+  &--color_variant_21 {
+    @include caption--color($color_variant_21);
+  }
+  &--color_variant_22 {
+    @include caption--color($color_variant_22);
+  }
+  &--color_variant_23 {
+    @include caption--color($color_variant_23);
+  }
+  &--color_variant_24 {
+    @include caption--color($color_variant_24);
+  }
+  &--color_variant_25 {
+    @include caption--color($color_variant_25);
+  }
+  &--color_variant_26 {
+    @include caption--color($color_variant_26);
+  }
+  &--color_variant_27 {
+    @include caption--color($color_variant_27);
+  }
+  &--color_variant_28 {
+    @include caption--color($color_variant_28);
+  }
+  &--color_variant_40 {
+    @include caption--color($color_variant_40);
+  }
+  &--color_variant_50 {
+    @include caption--color($color_variant_50);
+  }
+  &--color_variant_60 {
+    @include caption--color($color_variant_60);
+  }
+  &--color_variant_70 {
+    @include caption--color($color_variant_70);
+  }
+  &--color_variant_100 {
+    @include caption--color($color_variant_100);
   }
 }

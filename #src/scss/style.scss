@@ -22,7 +22,10 @@
   font-size: 10px;
 }
 
-html,
+html {
+  font-size: 10px;
+}
+
 body {
   font-size: 10px;
 }
@@ -35,7 +38,7 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: $color_variant_1;
 }
 
 button {
@@ -49,6 +52,11 @@ $wrapperWidth: 0em 2em;
   max-width: 1170px;
   margin: 0 auto;
   padding: $wrapperWidth;
+
+  &--more_padding {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
   &_lg {
     max-width: 1800px;
     margin: 0 auto;
@@ -76,6 +84,9 @@ $wrapperWidth: 0em 2em;
 
 .section {
   min-width: 1px;
+  &_lg {
+    padding: 3em 0em;
+  }
   &--full_screen_height {
     height: 100vh;
   }
@@ -86,14 +97,26 @@ $wrapperWidth: 0em 2em;
     background-position: center;
   }
   &--indents_md {
-    padding: 6.2em 0em 12.5em;
+    padding: 2em 0em 4em;
+    @media (min-width: 768px) {
+      padding: 3em 0em 7em;
+    }
+    @media (min-width: 1200px) {
+      padding: 6.2em 0em 12.5em;
+    }
+  }
+}
+
+.js-slider {
+  @media (min-width: 1200px) {
+    height: 100%;
   }
 }
 
 .img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 100%;
   // display: block;
   // position: relative;
   object-fit: cover;
@@ -133,86 +156,70 @@ $wrapperWidth: 0em 2em;
 
 // todoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
-.mt10 {
-  margin-top: 10px;
-}
-.no {
-  margin: 0px !important;
-  padding: 0px !important;
-}
-.ms-20 {
-  margin: 0 20px;
-}
+// .mt10 {
+//   margin-top: 10px;
+// }
+// .no {
+//   margin: 0px !important;
+//   padding: 0px !important;
+// }
+// .ms-20 {
+//   margin: 0 20px;
+// }
 
-.fac {
-  display: flex;
-  align-items: center;
-}
+// .fac {
+//   display: flex;
+//   align-items: center;
+// }
 
-.pa {
-  position: absolute;
-  z-index: 999;
-}
-.red {
-  background-color: red;
-}
-.cr svg {
-  background-color: red;
-  color: red;
-  fill: red;
-}
-.cr image {
-  background-color: red;
-  color: red;
-  fill: rgb(255, 0, 0);
-}
-.r {
-  right: 0px;
-}
-.in {
-  appearance: none;
-}
-.w {
-  height: 100% !important;
-}
-.mt0 {
-  margin-top: 0px !important;
-}
+// .pa {
+//   position: absolute;
+//   z-index: 999;
+// }
+// .red {
+//   background-color: red;
+// }
+// .cr svg {
+//   background-color: red;
+//   color: red;
+//   fill: red;
+// }
+// .cr image {
+//   background-color: red;
+//   color: red;
+//   fill: rgb(255, 0, 0);
+// }
+// .r {
+//   right: 0px;
+// }
+// .in {
+//   appearance: none;
+// }
+// .w {
+//   height: 100% !important;
+// }
+// .mt0 {
+//   margin-top: 0px !important;
+// }
 //todoooooooooooooooooooooooooooooooooooooooooooooooo
 
-// /* Style the tab */
-// .tab {
-//   overflow: hidden;
-//   border: 1px solid #ccc;
-//   background-color: #f1f1f1;
-// }
+.tab {
+  overflow: hidden;
+}
 
-// /* Style the buttons inside the tab */
-// .tab button {
-//   background-color: inherit;
-//   float: left;
-//   border: none;
-//   outline: none;
-//   cursor: pointer;
-//   padding: 14px 16px;
-//   transition: 0.3s;
-//   font-size: 17px;
-// }
+.tab button:hover {
+  background-color: $color_variant_50;
+}
 
-// /* Change background color of buttons on hover */
-// .tab button:hover {
-//   background-color: #ddd;
-// }
+.tab button.active {
+  background-color: $color_variant_40;
+  color: $color_variant_100;
+}
 
-// /* Create an active/current tablink class */
-// .tab button.active {
-//   background-color: #ccc;
-// }
+.tab__element {
+  @extend .control--cursor;
+}
 
-// /* Style the tab content */
-// .tabcontent {
-//   display: none;
-//   padding: 6px 12px;
-//   border: 1px solid #ccc;
-//   border-top: none;
-// }
+.tab__body {
+  display: none;
+}
