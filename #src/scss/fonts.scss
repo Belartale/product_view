@@ -1,47 +1,145 @@
 @include font("Montserrat-Light", "Montserrat-Light", "400", "normal");
+@include font("Montserrat-Bold", "Montserrat-ExtraBold", "400", "normal");
 @include font("Montserrat-Regular", "Montserrat-Regular", "400", "normal");
 @include font("Roboto-Regular", "Roboto-Regular", "400", "normal");
+
+@import "variables";
+
+@mixin caption--size($value) {
+  //! transition fonts on full
+
+  @media (min-width: 992px) {
+    font-size: $value;
+  }
+}
+@mixin caption--color($value) {
+  //! color media
+  & {
+    color: $value;
+  }
+  @media (min-width: 576px) {
+    &_media_sm {
+      color: $value;
+    }
+  }
+  @media (min-width: 768px) {
+    &_media_md {
+      color: $value;
+    }
+  }
+  @media (min-width: 992px) {
+    &_media_lg {
+      color: $value;
+    }
+  }
+  @media (min-width: 1200px) {
+    &_media_xl {
+      color: $value;
+    }
+  }
+  @media (min-width: 1400px) {
+    &_media_xxl {
+      color: $value;
+    }
+  }
+}
 
 .caption {
   &__element {
     min-width: 1px;
   }
   //! size
-  // &--size_1x {
-  //   @include adaptiv-font(16, 14);
-  // }
-  // &--size_1 {
-  //   @include adaptiv-font(57, 30);
-  // }
-  // &--size_2 {
-  //   @include adaptiv-font(23, 20);
-  // }
-  // &--size_3 {
-  //   @include adaptiv-font(19, 16);
-  // }
-  // &--size_4 {
-  //   @include adaptiv-font(14, 12);
-  // }
-  // &--size_5 {
-  //   @include adaptiv-font(13, 11);
-  // }
+  &--size_0 {
+    font-size: 10px !important;
+    @include caption--size(10px !important);
+  }
+  &--size_1 {
+    font-size: 3em;
+    @include caption--size(4.8em);
+  }
+  &--size_2 {
+    font-size: 2.5em;
+    @include caption--size(3.6em);
+  }
+  &--size_3 {
+    font-size: 2em;
+    @include caption--size(3em);
+  }
+  &--size_4 {
+    font-size: 1.8em;
+    @include caption--size(2.4em);
+  }
+  &--size_5 {
+    font-size: 1.6em;
+    @include caption--size(1.8em);
+  }
+  &--size_6 {
+    font-size: 1.5em;
+    @include caption--size(1.6em);
+  }
+  &--size_7 {
+    font-size: 1.4em;
+    @include caption--size(1.5em);
+  }
+  &--size_8 {
+    font-size: 1.3em;
+    @include caption--size(1.4em);
+  }
+  &--size_9 {
+    font-size: 1.2em;
+    @include caption--size(1.3em);
+  }
+
+  //
+
+  &--minus_x2 {
+    font-size: 0.5em;
+    @include caption--size(0.5em);
+  }
+  &--minus_x3 {
+    font-size: 0.33em;
+    @include caption--size(0.33em);
+  }
   //! family
-  // &--family_first {
-  //   font-family: $font--first;
-  // }
-  // &--family_second {
-  //   font-family: $font--second;
-  // }
-  // &--family_three {
-  //   font-family: $font--three;
-  // }
-  // &--family_four {
-  //   font-family: $font--four;
-  // }
-  // &--family_last {
-  //   font-family: $font--last;
-  //   font-weight: 100;
-  // }
+  &--family_1 {
+    font-family: "Montserrat-Regular";
+  }
+  &--family_1_lg {
+    font-family: "Montserrat-Bold";
+  }
+
+  &--family_2 {
+    font-family: "Montserrat-Light";
+  }
+  &--family_3 {
+    font-family: "Roboto-Regular";
+  }
+
+  //! width wold
+  &--spacing_1 {
+    letter-spacing: 0.2em;
+  }
+  &--spacing_2 {
+    letter-spacing: 0.054em;
+  }
+  &--spacing_3 {
+    letter-spacing: 0.05em;
+  }
+  &--spacing_4 {
+    letter-spacing: 0.027em;
+  }
+  &--spacing_5 {
+    letter-spacing: 0.02em;
+  }
+
+  //! line row
+  &--line_height_md {
+    line-height: 2.2rem; //? 22
+  }
+  &--line_height_lg {
+    line-height: 3rem; //? 30
+  }
+
   //! font-weight
   &--weight_100 {
     font-weight: 100;
@@ -52,23 +150,29 @@
   &--weight_900 {
     font-weight: 900;
   }
-  //! color
-  // &--variant_white {
-  //   color: $color--white;
-  // }
-  // &--variant_second {
-  //   color: $color--second;
-  // }
+
   //! other
-  &--text_uppercase {
+  &--uppercase {
     text-transform: uppercase;
   }
+  &--line_through {
+    text-decoration: line-through;
+  }
+  &--none_row {
+    white-space: nowrap;
+  }
 
-  // &--line_height_sm {
-  //   line-height: 22px;
-  // }
+  &--variant_variant_50 {
+    color: $color_variant_50;
+    @include caption--color($color_variant_50);
+    &_hover:hover {
+      color: $color_variant_50;
+      cursor: pointer;
+    }
+  }
 
-  &--align_center {
+  //! position text
+  &--text_center {
     text-align: center;
     @media (min-width: 576px) {
       &_media_sm {
@@ -96,7 +200,7 @@
       }
     }
   }
-  &--align_left {
+  &--text_left {
     text-align: left;
     @media (min-width: 576px) {
       &_media_sm {
@@ -123,5 +227,62 @@
         text-align: left;
       }
     }
+  }
+}
+
+.caption {
+  &--color_variant_1 {
+    @include caption--color($color_variant_1);
+  }
+  &--color_variant_2 {
+    @include caption--color($color_variant_2);
+  }
+  &--color_variant_3 {
+    @include caption--color($color_variant_3);
+  }
+  &--color_variant_4 {
+    @include caption--color($color_variant_4);
+  }
+  &--color_variant_20 {
+    @include caption--color($color_variant_20);
+  }
+  &--color_variant_21 {
+    @include caption--color($color_variant_21);
+  }
+  &--color_variant_22 {
+    @include caption--color($color_variant_22);
+  }
+  &--color_variant_23 {
+    @include caption--color($color_variant_23);
+  }
+  &--color_variant_24 {
+    @include caption--color($color_variant_24);
+  }
+  &--color_variant_25 {
+    @include caption--color($color_variant_25);
+  }
+  &--color_variant_26 {
+    @include caption--color($color_variant_26);
+  }
+  &--color_variant_27 {
+    @include caption--color($color_variant_27);
+  }
+  &--color_variant_28 {
+    @include caption--color($color_variant_28);
+  }
+  &--color_variant_40 {
+    @include caption--color($color_variant_40);
+  }
+  &--color_variant_50 {
+    @include caption--color($color_variant_50);
+  }
+  &--color_variant_60 {
+    @include caption--color($color_variant_60);
+  }
+  &--color_variant_70 {
+    @include caption--color($color_variant_70);
+  }
+  &--color_variant_100 {
+    @include caption--color($color_variant_100);
   }
 }

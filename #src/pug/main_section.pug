@@ -1,0 +1,15 @@
+- let setColor = ["Black", "Gray", "White", "Red"]
+- let setSize = ["XM", "SM", "MD", "LG", "XL", "XXL"]
+
+main.section.section--indents_md
+  .wrapper
+    .row.row--space_md.row--justify_center
+    
+      .cell.cell--100.cell--50_media_sm.cell--33_media_md.cell--50_media_xl
+        include ./slider.pug 
+
+      .cell.cell--100.cell--50_media_xl
+        include ./card_information.pug
+      
+      .cell.cell--100
+        include ./panel_information.pug 

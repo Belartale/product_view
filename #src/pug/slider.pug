@@ -1,0 +1,12 @@
+- let imgMan = {link: "img_man.com", src: "img/img_man.png", alt: "img man"}                    
+- let imgMaan = {link: "img_man.com", src: "img/img_man.png", alt: "img man"}                    
+
+- let sliderItem = [imgMan, imgMaan]
+
+
+
+.jq-slider.row--relative
+  -for (i of sliderItem)
+    .cell.row--relative
+      a(href=i.link)
+        img(src=i.src alt=i.alt).img

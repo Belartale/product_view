@@ -1,7 +1,13 @@
+@import "variables";
+
 .card {
   min-width: 1px;
+  &--scroll {
+    overflow-x: auto;
+  }
+
   &__element {
-    &_details {
+    &_details--arrow_right {
       & summary::-webkit-details-marker {
         display: none;
       }
@@ -10,13 +16,104 @@
       }
 
       & summary::after {
-        content: "close";
+        content: $arrowOpen;
         margin-left: 7px;
       }
 
       &[open] summary::after {
-        content: "open";
+        content: $arrowClose;
+        position: relative;
       }
+    }
+    &_details--arrow_bottom {
+      &:hover {
+        color: $color_variant_50;
+      }
+      & summary::-webkit-details-marker {
+        display: none;
+      }
+      & > summary {
+        list-style: none;
+      }
+
+      & summary {
+        position: relative;
+      }
+      & summary p {
+        white-space: pre;
+      }
+
+      & summary::after {
+        content: $arrowOpen;
+        position: absolute;
+        left: 0;
+        top: 20px;
+      }
+
+      &[open] summary::after {
+        content: $arrowClose;
+      }
+    }
+
+    &_scroll_burger_menu {
+      overflow-x: scroll;
+      &::-webkit-scrollbar-thumb {
+        color: $color_variant_50;
+        background-color: $color_variant_50;
+      }
+      @media (min-width: 992px) {
+        & {
+          overflow: visible;
+        }
+      }
+    }
+  }
+  // todo MOD
+  &--flex {
+    display: flex;
+  }
+  &--inline {
+    display: inline;
+  }
+
+  &--bg_hover_variant_50:hover {
+    background-color: $color_variant_50;
+    @include min_media(background-color, $color_variant_50);
+  }
+
+  &--padding_sm {
+    padding: 0.5em;
+  }
+  &--padding_md {
+    padding: 1em;
+  }
+
+  &--border {
+    $number: 0.1em;
+    $border: $color_variant_26;
+
+    &_circle {
+      border-radius: 50%;
+    }
+
+    &_sm {
+      border: $number solid $border;
+    }
+    &_top_sm {
+      border-top: $number solid $border;
+    }
+    &_bottom_sm {
+      border-bottom: $number solid $border;
+    }
+    &_right_sm {
+      border-right: $number solid $border;
+    }
+    &_left_sm {
+      border-left: $number solid $border;
+    }
+
+    &_lg {
+      border: $number solid $border;
     }
   }
 }

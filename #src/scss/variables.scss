@@ -1,43 +1,289 @@
-$color_first: #333333;
-$color_second: #727272;
-$color_three: #f8f8f8;
+$color_variant_1: black;
+$color_variant_2: #222222;
+$color_variant_3: #333333;
+$color_variant_4: #454647;
 
-$color_four: #00c8c8;
+$color_variant_20: #727272;
+$color_variant_21: #777777;
+$color_variant_22: #8e8c8c;
+$color_variant_23: #999999;
+$color_variant_24: #9a9a9a;
 
-//! color background
-.color--variant_dark {
-  background-color: $color_first;
+$color_variant_25: #989898;
+$color_variant_26: #e7e7e7;
+$color_variant_27: #cccccc;
+$color_variant_28: #f8f8f8;
+
+$color_variant_40: #575153;
+
+$color_variant_50: #00c8c8;
+
+$color_variant_60: #ded3aa;
+
+$color_variant_70: #720b0b;
+
+$color_variant_100: #ffffff;
+
+$arrowOpen: "⌵";
+$arrowClose: "<";
+
+@mixin media_background-color($var) {
+  & {
+    background-color: $var;
+  }
+  @media (min-width: 576px) {
+    &_media_xm {
+      background-color: $var;
+    }
+  }
+  @media (min-width: 768px) {
+    &_media_md {
+      background-color: $var;
+    }
+  }
+  @media (min-width: 992px) {
+    &_media_lg {
+      background-color: $var;
+    }
+  }
+  @media (min-width: 1200px) {
+    &_media_xl {
+      background-color: $var;
+    }
+  }
+  @media (min-width: 1400px) {
+    &_media_xxl {
+      background-color: $var;
+    }
+  }
+  //! max
+  @media (max-width: 576px) {
+    &_media_max_xm {
+      background-color: $var;
+    }
+  }
+  @media (max-width: 768px) {
+    &_media_max_md {
+      background-color: $var;
+    }
+  }
+  @media (max-width: 992px) {
+    &_media_max_lg {
+      background-color: $var;
+    }
+  }
+  @media (max-width: 1200px) {
+    &_media_max_xl {
+      background-color: $var;
+    }
+  }
+  @media (max-width: 1400px) {
+    &_media_max_xxl {
+      background-color: $var;
+    }
+  }
 }
 
-.color--variant_secondary {
-  background-color: $color_second;
+@mixin min_media($what, $howMuch) {
+  @media (min-width: 576px) {
+    &_media_sm {
+      #{$what}: #{$howMuch};
+    }
+  }
+  @media (min-width: 768px) {
+    &_media_md {
+      #{$what}: #{$howMuch};
+    }
+  }
+  @media (min-width: 992px) {
+    &_media_lg {
+      #{$what}: #{$howMuch};
+    }
+  }
+  @media (min-width: 1200px) {
+    &_media_xl {
+      #{$what}: #{$howMuch};
+    }
+  }
+  @media (min-width: 1400px) {
+    &_media_xxl {
+      #{$what}: #{$howMuch};
+    }
+  }
 }
 
-.color--variant_light {
-  background-color: $color_three;
+@mixin forRowCellSpace($marginMinus, $margin, $padding) {
+  & {
+    margin: $marginMinus;
+    @include min_media(margin, $marginMinus);
+  }
+  & > .cell--0 {
+    padding: $padding;
+    margin: $margin;
+    @include min_media(padding, $padding);
+    @include min_media(margin, $margin);
+  }
+  & > .cell--33 {
+    width: 33.33%;
+    padding: $padding;
+    margin: $margin;
+    @include min_media(padding, $padding);
+    @include min_media(margin, $margin);
+  }
+  & > .cell--100 {
+    width: 100%;
+    padding: $padding;
+    margin: $margin;
+    @include min_media(width, 100%);
+    @include min_media(padding, $padding);
+    @include min_media(margin, $margin);
+  }
+  @for $i from 1 through 9 {
+    & > .cell--#{"#{$i}0"} {
+      width: #{"#{$i}0%"};
+      padding: $padding;
+      margin: $margin;
+      @media (min-width: 576px) {
+        &_media_sm {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 768px) {
+        &_media_md {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 992px) {
+        &_media_lg {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1200px) {
+        &_media_xl {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1400px) {
+        &_media_xxl {
+          width: #{"#{$i}0%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+    }
+    & > .cell--#{"#{$i}5"} {
+      width: #{"#{$i}5%"};
+      padding: $padding;
+      margin: $margin;
+      @media (min-width: 576px) {
+        &_media_sm {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 768px) {
+        &_media_md {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 992px) {
+        &_media_lg {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1200px) {
+        &_media_xl {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+      @media (min-width: 1400px) {
+        &_media_xxl {
+          width: #{"#{$i}5%"};
+          padding: $padding;
+          margin: $margin;
+        }
+      }
+    }
+  }
 }
 
-.color--variant_primary {
-  background-color: $color_first;
-}
+.color {
+  &--bg_variant_1 {
+    @include media_background-color($color_variant_1);
+  }
+  &--bg_variant_2 {
+    @include media_background-color($color_variant_2);
+  }
 
-//! color fonts
-.caption--variant_dark {
-  background-color: $color_first;
-}
+  &--bg_variant_3 {
+    @include media_background-color($color_variant_3);
+  }
 
-.caption--variant_secondary {
-  background-color: $color_second;
-}
+  &--bg_variant_4 {
+    @include media_background-color($color_variant_4);
+  }
 
-.caption--variant_light {
-  background-color: $color_three;
-}
+  &--bg_variant_20 {
+    @include media_background-color($color_variant_20);
+  }
 
-.caption--variant_primary {
-  background-color: $color_first;
-}
+  &--bg_variant_21 {
+    @include media_background-color($color_variant_21);
+  }
 
-body {
-  font-size: 10px;
+  &--bg_variant_22 {
+    @include media_background-color($color_variant_22);
+  }
+
+  &--bg_variant_23 {
+    @include media_background-color($color_variant_23);
+  }
+
+  &--bg_variant_24 {
+    @include media_background-color($color_variant_24);
+  }
+
+  &--bg_variant_25 {
+    @include media_background-color($color_variant_25);
+  }
+
+  &--bg_variant_26 {
+    @include media_background-color($color_variant_26);
+  }
+
+  &--bg_variant_27 {
+    @include media_background-color($color_variant_27);
+  }
+
+  &--bg_variant_28 {
+    @include media_background-color($color_variant_28);
+  }
+  &--bg_variant_40 {
+    @include media_background-color($color_variant_40);
+  }
+  &--bg_variant_50 {
+    @include media_background-color($color_variant_50);
+  }
+  &--bg_variant_60 {
+    @include media_background-color($color_variant_60);
+  }
+
+  &--bg_variant_100 {
+    @include media_background-color($color_variant_100);
+  }
 }

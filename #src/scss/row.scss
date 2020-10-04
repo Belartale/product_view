@@ -1,30 +1,182 @@
+@import "variables";
 @import "row_indents";
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: -10px;
+  margin: 0px -1em;
 
+  &--block > * {
+    display: block;
+  }
+
+  &--relative {
+    position: relative;
+    @media (min-width: 992px) {
+      &_sm_top_media_lg {
+        position: relative;
+        bottom: 0.6em;
+      }
+    }
+  }
+  &--absolute_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &_right {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0%, -50%);
+    }
+    &_left {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0%, -50%);
+    }
+  }
+  &--absolute_right_sm {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (min-width: 992px) {
+    &_media_lg {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+    }
+  }
   // todo MOD
+  &--flex {
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: 992px) {
+      &_media_lg {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
   &--indents_none {
     margin: 0px;
   }
+  &--flex_all_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+  &--flex_column {
+    flex-direction: column;
+    @media (min-width: 992px) {
+      &_media_lg {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &--align-center {
+    align-items: center;
+    @media (min-width: 992px) {
+      &_media_lg {
+        align-items: center;
+      }
+    }
+  }
   &--items_center {
     align-items: center;
+    @media (min-width: 992px) {
+      &_media_lg {
+        align-items: center;
+      }
+    }
   }
   &--items_flex_end {
     align-items: flex-end;
+    @media (min-width: 992px) {
+      &_media_lg {
+        align-items: flex-end;
+      }
+    }
+  }
+  &--justify_start {
+    @include min_media(justify-content, flex-start);
   }
   &--justify_center {
     justify-content: center;
+    @media (min-width: 992px) {
+      &_media_lg {
+        justify-content: center;
+      }
+    }
   }
 
   &--justify_between {
     justify-content: space-between;
+    @include min_media(justify-content, space-between);
   }
-
   &--justify_evenly {
     justify-content: space-evenly;
+    @media (min-width: 992px) {
+      &_media_lg {
+        justify-content: space-evenly;
+      }
+    }
+  }
+  &--justify_end {
+    justify-content: flex-end;
+    @media (min-width: 992px) {
+      &_media_lg {
+        justify-content: flex-end;
+      }
+    }
+  }
+  &--flex_nowrap {
+    flex-wrap: nowrap;
+    @media (min-width: 992px) {
+      &_media_lg {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
+  @for $i from 1 through 8 {
+    &--order_#{$i} {
+      order: $i;
+      @include min_media(order, #{$i});
+    }
+  }
+  @for $i from 1 through 10 {
+    &--z_#{$i} {
+      z-index: $i;
+    }
+  }
+}
+
+.row--space {
+  &_sm {
+    @include forRowCellSpace(0 -0.5em, 0.5em 0em, 0 0.5em);
+  }
+  &_sm_1 {
+    @include forRowCellSpace(0 -0.7em, 0.7em 0em, 0 0.7em);
+  }
+  &_md {
+    @include forRowCellSpace(0 -1.5em, 1.5em 0em, 0 1.5em);
+  }
+
+  &_lg {
+    @include forRowCellSpace(0 -2.5em, 2.5em 0em, 0 2.5em);
+  }
+  &_lg-1 {
+    @include forRowCellSpace(0 -3em, 3em 0em, 0 3em);
+  }
+
+  &_xl {
+    @include forRowCellSpace(0 -3.5em, 3.5em 0em, 0 3.5em);
   }
 }

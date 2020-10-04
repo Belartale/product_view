@@ -1,74 +1,171 @@
 @mixin font($font_name, $file_name, $weight, $style) {
-  @font-face {
-    font-family: $font_name;
-    font-display: swap;
-    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-    font-weight: #{$weight};
-    font-style: #{$style};
-  }
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"),
+			url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
 }
 
 @import "variables";
 @import "fonts";
 @import "row";
+@import "control";
 @import "card";
+@import "cell";
 
 @import "header";
 
+:root {
+	font-size: 10px;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 10px;
+}
+
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
 a {
-  text-decoration: none;
-  color: black;
+	text-decoration: none;
+	color: $color_variant_1;
 }
 
 button {
-  border: none;
-  background: transparent;
+	border: none;
+	background: transparent;
 }
+
+$wrapperWidth: 0em 2em;
 
 .wrapper {
-  max-width: 1170px;
-  margin: 0 auto;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: $wrapperWidth;
+
+	&--more_padding {
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+	&_lg {
+		max-width: 1800px;
+		margin: 0 auto;
+		padding: $wrapperWidth;
+	}
+	&_hidden {
+		@extend .wrapper;
+		padding: 0;
+		@media (min-width: 992px) {
+			padding: $wrapperWidth;
+		}
+		&_lg {
+			@extend .wrapper;
+			max-width: 1800px;
+			padding: 0;
+			@media (min-width: 992px) {
+				padding: $wrapperWidth;
+			}
+		}
+	}
 }
 
-// Montserrat Regular
-// Montserrat light
-// Roboto
-.img {
-  display: block;
-  position: relative;
-  object-fit: contain;
+.section {
+	min-width: 1px;
+	&_lg {
+		padding: 3em 0em;
+	}
+	&--full_screen_height {
+		height: 100vh;
+	}
+	&--img_city {
+		background-image: url(../img/img_city.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	&--indents_md {
+		padding: 2em 0em 4em;
+		@media (min-width: 768px) {
+			padding: 3em 0em 7em;
+		}
+		@media (min-width: 1200px) {
+			padding: 6.2em 0em 12.5em;
+		}
+	}
+}
 
-  &--ratio_1x0-8 {
-    padding-bottom: 77.7%;
-  }
-  &--ratio_1-1x1 {
-    padding-bottom: 105.84%;
-  }
-  &__element {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
+.js-slider {
+	@media (min-width: 1200px) {
+		height: 100%;
+	}
+}
+
+.img {
+	display: block;
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+	&__element {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	&--deg_180 {
+		transform: rotate(180deg);
+	}
 }
 
 .list {
-  &--list_style_none {
-    list-style: none;
-  }
-  &__item {
-    min-width: 1px;
-  }
-  &--display_flex {
-    display: flex;
-  }
+	&--list_style_none {
+		list-style: none;
+	}
+	&__item {
+		min-width: 1px;
+	}
+	&--display_flex {
+		display: flex;
+	}
+	&--sides {
+		margin-left: 12px;
+	}
+	&--point_sm {
+		list-style: none;
+		& li::before {
+			content: "\2022";
+			position: relative;
+			right: 10px;
+		}
+	}
 }
-.control {
-  min-width: 1px;
+
+.tab {
+	overflow: hidden;
+}
+
+.tab button:hover {
+	background-color: $color_variant_50;
+}
+
+.tab button.active {
+	background-color: $color_variant_40;
+	color: $color_variant_100;
+}
+
+.tab__element {
+	@extend .control--cursor;
+}
+
+.tab__body {
+	display: none;
 }

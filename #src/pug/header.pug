@@ -1,25 +1,14 @@
 header.header
-  .wrapper
-    button.control(class="header__burger-button header__burger-button-true") 
-      svg.svg-inline--fa.fa-bars.fa-w-14(aria-hidden='true' focusable='false' data-prefix='fas' data-icon='bars' role='img' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 448 512')
-        path(fill='currentColor' d='M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z')
+  button.control.control--position_right.header__burger-button.header__burger-button-true
+    svg.svg-inline--fa.fa-bars.fa-w-14(aria-hidden='true' focusable='false' data-prefix='fas' data-icon='bars' role='img' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 448 512')
+      path(fill='currentColor' d='M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z')
 
-    nav.header__menu
-      button(class="header__burger-button") 
-        svg.svg-inline--fa.fa-times.fa-w-11(aria-hidden='true' focusable='false' data-prefix='fas' data-icon='times' role='img' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 352 512')
-          path(fill='currentColor' d='M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z')
-      .row.row--justify_between
-        .cell
-          .card
-            details.card__element_details
-              summary.card__element_summary lorem ipsum details
-              p.caption Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas tempore tenetur ipsam culpa deleniti nostrum est magni dolore saepe. Cum laudantium autem aut placeat, cumque impedit mollitia labore quibusdam animi.
-
-
-
-          p.caption Currency : GBP
-        .cell
-          .cell
-            p.caption Register
-          .cell
-            p.caption Sign In
+  nav.header__menu.color--bg_variant_3_media_max_lg
+    button.control.header__burger-button.row--margin_bottom_lg-1x_em.row--margin_left_sm-1x_em
+      svg.svg-inline--fa.fa-times.fa-w-11(aria-hidden='true' focusable='false' data-prefix='fas' data-icon='times' role='img' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 352 512')
+        path(fill='currentColor' d='M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z')
+    .header_two_block_part
+      .header_bottom_part.row--padding_top_md-1x_em_media_lg.row--padding_bottom_md-5_em_media_lg.row--padding_top_xl-1x_em_media_xxl.row--padding_bottom_xxl-5_em_media_xxl
+        include ./header_bottom_part.pug  
+      .header_top_part
+        include ./header_top_part.pug
